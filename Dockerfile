@@ -1,4 +1,4 @@
-FROM node:20.1
+FROM node:21.6.2
 LABEL authors="edonssfall"
 
 WORKDIR /web
@@ -6,5 +6,3 @@ WORKDIR /web
 COPY . .
 
 RUN npm install -g @angular/cli
-
-RUN npm install
