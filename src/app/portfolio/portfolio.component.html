@@ -1,0 +1,14 @@
+<div class="main-theme" ngx-parallax>
+    <div class="container" [ngClass]="{ 'dark-theme': darkTheme }">
+        <button mat-button (click)="toggleTheme()">
+            <mat-icon>{{ darkTheme ? 'brightness_7' : 'brightness_4' }}</mat-icon>
+        </button>
+        <button mat-button (click)="toggleLanguage()">
+            Toggle Language
+        </button>
+
+        <app-home-component/>
+        <app-about-component/>
+        <app-projects-component/>
+    </div>
+</div>

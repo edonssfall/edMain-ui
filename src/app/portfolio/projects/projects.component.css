@@ -6,3 +6,7 @@
 .project {
     margin-bottom: 20px;
 }
+
+.dark-theme .projects-section {
+    color: white;
+}

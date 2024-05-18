@@ -2,3 +2,7 @@
     padding: 50px;
     text-align: center;
 }
+
+.dark-theme .about-section {
+    color: white;
+}
