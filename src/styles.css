@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .main-theme {
+        background-position: center;
+        background-attachment: scroll;
+    }
+
+    .about-section, .projects-section {
+        padding: 20px;
+    }
+}

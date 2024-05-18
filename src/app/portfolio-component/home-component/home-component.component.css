@@ -1,0 +1,12 @@
+.main-theme {
+    height: 100vh;
+    /*background-image: url('/assets/theme.jpg');*/
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
