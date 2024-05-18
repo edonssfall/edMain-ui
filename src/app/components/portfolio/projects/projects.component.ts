@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {NgForOf} from "@angular/common";
 
 @Component({
-  selector: 'app-projects-component',
+  selector: 'app-projects',
   standalone: true,
   imports: [
     NgForOf
