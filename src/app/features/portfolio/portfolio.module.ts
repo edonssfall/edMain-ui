@@ -14,6 +14,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {RouterModule} from "@angular/router";
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
+import {ThemeService} from "./services/theme.service";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,10 @@ import {NgModule} from '@angular/core';
     ContactComponent,
     AboutComponent,
     HomeComponent,
-  ]
+  ],
+  providers: [
+    ThemeService,
+  ],
 })
 export class PortfolioModule {
 }
