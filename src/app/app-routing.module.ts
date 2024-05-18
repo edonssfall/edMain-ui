@@ -1,4 +1,4 @@
-import {PortfolioModule} from "./components/portfolio/portfolio.module";
+import {PortfolioModule} from "./features/portfolio/portfolio.module";
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 

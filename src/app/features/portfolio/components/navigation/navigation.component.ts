@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.css']
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrl: './navigation.component.css'
 })
-export class PortfolioComponent {
+export class NavigationComponent {
   isDarkTheme = false;
 
   toggleTheme() {
@@ -15,6 +15,5 @@ export class PortfolioComponent {
 
   changeLanguage(language: string) {
     // Implement language change logic here
-    console.log(`Language changed to ${language}`);
   }
 }
