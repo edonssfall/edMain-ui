@@ -1,8 +1,9 @@
 .about-section {
-    padding: 50px;
-    text-align: center;
+  height: 100vh;
+  padding: 50px;
+  text-align: center;
 }
 
 .dark-theme .about-section {
-    color: white;
+  color: white;
 }

@@ -1,7 +1,7 @@
 /**
  * Interface for the theme object
- * @param theme the name of the theme
+ * @property isDark - A boolean value to determine if the theme is dark or light
  */
 export interface ThemeInterface {
-  theme: string;
+  isDark: boolean;
 }

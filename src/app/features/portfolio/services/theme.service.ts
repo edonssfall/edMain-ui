@@ -8,7 +8,7 @@ import {Injectable, OnInit} from '@angular/core';
  */
 export class ThemeService implements OnInit {
   storageName = environment.localStorage.theme;
-  currentTheme: ThemeInterface = {theme: 'light'};
+  currentTheme: ThemeInterface = {isDark: false};
 
   /**
    * Sets the theme which is stored in the localstorage and if there is no theme
@@ -16,9 +16,7 @@ export class ThemeService implements OnInit {
    */
   ngOnInit(): void {
     const savedTheme = localStorage.getItem(this.storageName);
-    if (!savedTheme) {
-      this.changeTheme();
-    } else {
+    if (savedTheme) {
       this.changeTheme(JSON.parse(savedTheme));
     }
   }
@@ -27,8 +25,8 @@ export class ThemeService implements OnInit {
    * Changes the theme and saves it into localstorage
    * @param theme the name of the theme
    */
-  changeTheme(theme?: ThemeInterface) {
-    this.currentTheme = theme ? theme : this.currentTheme;
-    localStorage.setItem(this.storageName, JSON.stringify(this.currentTheme));
+  changeTheme(theme: boolean) {
+    this.currentTheme = {isDark: theme};
+    localStorage.setItem(this.storageName, theme.toString());
   }
 }

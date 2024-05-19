@@ -19,7 +19,7 @@ import {NgModule} from '@angular/core';
   ],
   providers: [
     provideAnimationsAsync(),
-    LanguageService,
+    // LanguageService,
   ],
   bootstrap: [AppComponent]
 })

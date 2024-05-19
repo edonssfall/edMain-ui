@@ -1,21 +1,39 @@
-<mat-toolbar color="primary">
-  <span>My Portfolio</span>
-  <span class="spacer"></span>
-  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="/home">Home</button>
-    <button mat-menu-item routerLink="/about">About Me</button>
-    <button mat-menu-item routerLink="/projects">Projects</button>
-    <button mat-menu-item routerLink="/contact">Contact Me</button>
-  </mat-menu>
-  <button mat-icon-button (click)="toggleTheme()">
-    <mat-icon>{{ isDarkTheme ? 'brightness_7' : 'brightness_4' }}</mat-icon>
-  </button>
-  <button mat-icon-button [matMenuTriggerFor]="langMenu">
-    <mat-icon>language</mat-icon>
-  </button>
-  <mat-menu #langMenu="matMenu">
-    <button mat-menu-item (click)="changeLanguage('en')">English</button>
-    <button mat-menu-item (click)="changeLanguage('de')">German</button>
-  </mat-menu>
+<mat-toolbar color="secondary" class="menu-toolbar">
+  <div class="left-section">
+    <span>My Portfolio</span>
+  </div>
+  <div class="center-section">
+    <div class="menu-item">
+      <a href="#home">
+        Home
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="#about">
+        About Me
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="#projects">
+        Projects
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="#contact">
+        Contact Me
+      </a>
+    </div>
+  </div>
+  <div class="right-section">
+    <button mat-icon-button (click)="toggleTheme()">
+      <mat-icon>{{ this.themeService.currentTheme.isDark ? 'brightness_4' : 'brightness_7' }}</mat-icon>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="langMenu">
+      <mat-icon>language</mat-icon>
+    </button>
+    <mat-menu #langMenu="matMenu">
+      <button mat-menu-item (click)="changeLanguage('en')">English</button>
+      <button mat-menu-item (click)="changeLanguage('de')">German</button>
+    </mat-menu>
+  </div>
 </mat-toolbar>

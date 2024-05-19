@@ -1,12 +1,13 @@
 .projects-section {
-    padding: 50px;
-    text-align: center;
+  height: 100vh;
+  padding: 50px;
+  text-align: center;
 }
 
 .project {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .dark-theme .projects-section {
-    color: white;
+  color: white;
 }

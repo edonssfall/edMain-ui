@@ -1,9 +1,66 @@
-.mat-toolbar {
+.menu-toolbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.spacer {
-  flex: 1 1 auto;
+.left-section {
+  display: flex;
+  align-items: center;
+  cursor: alias;
+}
+
+.center-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.menu-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.menu-item:has(+ .menu-item:hover),
+.menu-item:hover + .menu-item {
+  scale: 0.8;
+  transition: .4s;
+}
+
+.menu-item:has(+ .menu-item:hover),
+.menu-item:hover + .menu-item + .menu-item{
+  scale: 0.7;
+  transition: .4s;
+}
+
+.menu-item:has(+ .menu-item:hover),
+.menu-item:hover + .menu-item + .menu-item + .menu-item{
+  scale: 0.6;
+  transition: .4s;
+}
+
+.menu-item.active {
+  font-weight: bold;
+  opacity: 1;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
 }

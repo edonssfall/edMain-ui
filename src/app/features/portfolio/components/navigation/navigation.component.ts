@@ -1,3 +1,4 @@
+import {ThemeService} from "../../services/theme.service";
 import {Component} from '@angular/core';
 
 @Component({
@@ -6,11 +7,13 @@ import {Component} from '@angular/core';
   styleUrl: './navigation.component.css'
 })
 export class NavigationComponent {
-  isDarkTheme = false;
+  constructor(public themeService: ThemeService) {
+  }
 
   toggleTheme() {
-    this.isDarkTheme = !this.isDarkTheme;
-    document.body.classList.toggle('dark-theme', this.isDarkTheme);
+    const isDarkTheme = !this.themeService.currentTheme.isDark;
+    this.themeService.changeTheme(isDarkTheme)
+    document.body.classList.toggle('dark-theme', isDarkTheme);
   }
 
   changeLanguage(language: string) {
