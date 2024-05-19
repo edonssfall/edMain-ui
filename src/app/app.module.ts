@@ -9,7 +9,7 @@ import {NgModule} from '@angular/core';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserAnimationsModule,
