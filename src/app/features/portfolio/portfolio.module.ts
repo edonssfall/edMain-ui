@@ -15,11 +15,13 @@ import {MatMenuModule} from '@angular/material/menu';
 import {RouterModule} from "@angular/router";
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
+import {MatRipple} from "@angular/material/core";
 
 @NgModule({
   declarations: [
-    PortfolioComponent,
     NavigationComponent,
+    PortfolioComponent,
+    HomeComponent,
   ],
   exports: [
     PortfolioComponent,
@@ -37,7 +39,7 @@ import {NgModule} from '@angular/core';
     ProjectsComponent,
     ContactComponent,
     AboutComponent,
-    HomeComponent,
+    MatRipple,
   ],
   providers: [
     ThemeService,

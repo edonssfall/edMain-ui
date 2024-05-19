@@ -1,15 +1,16 @@
 .home-theme {
-    height: 100vh;
-    /*background-image: url('/assets/theme.jpg');*/
-    background-size: cover;
-    background-attachment: fixed;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
 }
 
-.dark-theme .home-theme {
-    color: white;
+.text-section {
+  padding: 0 150px;
+}
+
+.text-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
