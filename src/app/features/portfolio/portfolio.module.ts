@@ -28,6 +28,7 @@ import {MatRipple} from "@angular/material/core";
 import {RouterModule} from "@angular/router";
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
+import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
@@ -65,6 +66,8 @@ import {NgModule} from '@angular/core';
     MatCellDef,
     MatHeaderRowDef,
     MatRowDef,
+    MatGridList,
+    MatGridTile,
   ],
   providers: [
     ThemeService,
