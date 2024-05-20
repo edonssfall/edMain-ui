@@ -1,4 +1,25 @@
-<div id="contact">
-    <h1>contact</h1>
-    <p>contact works!</p>
+<div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }">
+  <footer class='footer'>
+    <div class='footer-content'>
+      <div class='contact-info'>
+        <button mat-button (click)='copyToClipboard("{{environment.contact.phone}}")'>
+          Phone: {{ environment.contact.phone }}
+        </button>
+        <a mat-button href='mailto:{{environment.contact.email}}'>
+          Email: {{ environment.contact.email }}
+        </a>
+      </div>
+      <div class='social-links'>
+        <a class="icon-github" mat-icon-button href='{{environment.contact.github}}' target='_blank'
+           aria-label='GitHub'>
+          <mat-icon class="icons" svgIcon="github"></mat-icon>
+        </a>
+        <a class="icon-linkedin" mat-icon-button href='{{environment.contact.linkedin}}}' target='_blank'
+           aria-label='LinkedIn'>
+          <mat-icon class="icons" svgIcon="linkedin">business_center</mat-icon>
+        </a>
+      </div>
+    </div>
+    <span class='notification' *ngIf='showNotification'>{{ notificationMessage }}</span>
+  </footer>
 </div>

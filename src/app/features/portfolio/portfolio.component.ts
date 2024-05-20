@@ -1,5 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {ThemeService} from "./services/theme.service";
+import {ScrollService} from "./services/scroll.service";
 
 @Component({
   selector: 'app-portfolio',
@@ -8,21 +9,43 @@ import {ThemeService} from "./services/theme.service";
 })
 export class PortfolioComponent implements OnInit {
   isScrollToTopVisible = false;
+  footerAdjust = false
 
-  constructor(public themeService: ThemeService) {
+  constructor(public themeService: ThemeService,
+              private scrollService: ScrollService) {
   }
 
   ngOnInit() {
     this.themeService.ngOnInit();
+
+    this.scrollService.getScrollPosition().subscribe(position => {
+      this.isScrollToTopVisible = position > 200;
+      this.checkFooterAdjust(position);
+    });
+
+    this.scrollService.getWindowHeight().subscribe(() => {
+      this.checkFooterAdjust(window.pageYOffset);
+    });
+  }
+
+  checkFooterAdjust(scrollPosition: number) {
+    const footer = document.querySelector('.footer');
+    if (footer) {
+      const footerPosition = footer.getBoundingClientRect().top + window.scrollY;
+      const windowBottom = scrollPosition + window.innerHeight;
+
+      this.footerAdjust = windowBottom >= footerPosition;
+    }
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    if (document.documentElement.scrollTop > 400) {
-      this.isScrollToTopVisible = true;
-    } else if (this.isScrollToTopVisible && window.pageYOffset || document.body.scrollTop < 10) {
-      this.isScrollToTopVisible = false;
-    }
+    this.scrollService.updateScrollPosition(window.pageYOffset);
+  }
+
+  @HostListener('window:resize', [])
+  onWindowResize() {
+    this.scrollService.updateWindowHeight(window.innerHeight);
   }
 
   scrollToTop() {

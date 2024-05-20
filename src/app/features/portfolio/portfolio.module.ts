@@ -22,6 +22,8 @@ import {MatRipple} from "@angular/material/core";
 import {RouterModule} from "@angular/router";
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
+import {ScrollService} from "./services/scroll.service";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import {NgModule} from '@angular/core';
     EducationComponent,
     PortfolioComponent,
     ProjectsComponent,
+    ContactComponent,
     AboutComponent,
     WorkComponent,
     HomeComponent,
@@ -40,6 +43,7 @@ import {NgModule} from '@angular/core';
   imports: [
     PortfolioRoutingModule,
     MatSidenavModule,
+    HttpClientModule,
     MatToolbarModule,
     MatButtonModule,
     MatTableModule,
@@ -52,9 +56,9 @@ import {NgModule} from '@angular/core';
     MatGridList,
     MatGridTile,
     MatRipple,
-    ContactComponent,
   ],
   providers: [
+    ScrollService,
     ThemeService,
   ],
 })

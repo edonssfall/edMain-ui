@@ -1,12 +1,20 @@
 .menu-toolbar {
+  background-color: #3f51b5;
   width: 100%;
   display: flex;
+  color: white;
   justify-content: space-between;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+}
+
+.menu-toolbar .center-section a {
+  text-decoration: none;
+  color: white;
 }
 
 .dark-theme .menu-toolbar {
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  background-color: #121212;
+  box-shadow: 0 10px 15px rgba(255, 255, 255, 0.3);
 }
 
 .left-section {
@@ -22,9 +30,6 @@
   width: 50%;
 }
 
-.dark-theme .center-section a {
-  color: white;
-}
 
 .menu-item {
   padding: 10px;
