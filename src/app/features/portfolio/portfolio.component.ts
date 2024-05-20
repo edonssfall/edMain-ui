@@ -1,5 +1,5 @@
+import {Component, HostListener, OnInit} from '@angular/core';
 import {ThemeService} from "./services/theme.service";
-import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,10 +7,25 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
+  isScrollToTopVisible = false;
+
   constructor(public themeService: ThemeService) {
   }
 
   ngOnInit() {
     this.themeService.ngOnInit();
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (document.documentElement.scrollTop > 400) {
+      this.isScrollToTopVisible = true;
+    } else if (this.isScrollToTopVisible && window.pageYOffset || document.body.scrollTop < 10) {
+      this.isScrollToTopVisible = false;
+    }
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

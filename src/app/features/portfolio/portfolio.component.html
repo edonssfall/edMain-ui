@@ -7,4 +7,8 @@
     <app-projects></app-projects>
     <app-contact></app-contact>
   </div>
+
+  <button mat-fab class="scroll-to-top" [ngClass]="{'show-scrollTop': isScrollToTopVisible}" (click)="scrollToTop()" [class.scroll-to-top-show]="isScrollToTopVisible">
+    <mat-icon>keyboard_arrow_up</mat-icon>
+  </button>
 </div>

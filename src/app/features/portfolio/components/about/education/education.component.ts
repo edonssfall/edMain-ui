@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './education.component.css'
 })
 export class EducationComponent {
-
+  dataSource = [
+    {name: 'Gibb Bern', year: '2023 Aug. -.', location: 'Bern', status: 'On going'},
+    {name: 'ODATRYA - Bachelor', year: '2016 Sep. - 2018 Jul.', location: 'Odesa, Ukraine', status: 'Closed'},
+  ]
+  displayedColumns: string[] = ['name', 'year', 'location', 'status'];
 }
