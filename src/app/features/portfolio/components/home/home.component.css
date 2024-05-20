@@ -12,5 +12,15 @@
 
 .text-section h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .home-theme {
+    justify-content: center;
+  }
+
+  .text-section {
+    padding: 0 20px;
+  }
 }
