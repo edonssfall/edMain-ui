@@ -1,17 +1,9 @@
-import {
-  MatCell, MatCellDef,
-  MatColumnDef,
-  MatHeaderCell,
-  MatHeaderCellDef,
-  MatHeaderRow, MatHeaderRowDef,
-  MatRow, MatRowDef,
-  MatTable
-} from "@angular/material/table";
-import { EducationComponent } from './components/about/education/education.component';
+import {EducationComponent} from './components/about/education/education.component';
 import {NavigationComponent} from './components/navigation/navigation.component';
 import {ProjectsComponent} from "./components/projects/projects.component";
 import {ContactComponent} from "./components/contact/contact.component";
 import {WorkComponent} from './components/about/work/work.component';
+import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 import {PortfolioRoutingModule} from "./portfolio-routing.module";
 import {AboutComponent} from "./components/about/about.component";
 import {HomeComponent} from "./components/home/home.component";
@@ -20,21 +12,23 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {PortfolioComponent} from "./portfolio.component";
+import {MatTableModule} from "@angular/material/table";
 import {ThemeService} from "./services/theme.service";
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from "@angular/material/card";
 import {MatRipple} from "@angular/material/core";
 import {RouterModule} from "@angular/router";
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
     NavigationComponent,
     EducationComponent,
     PortfolioComponent,
+    ProjectsComponent,
     AboutComponent,
     WorkComponent,
     HomeComponent,
@@ -48,26 +42,17 @@ import {MatGridList, MatGridTile} from "@angular/material/grid-list";
     MatSidenavModule,
     MatToolbarModule,
     MatButtonModule,
+    MatTableModule,
     MatIconModule,
     MatMenuModule,
+    MatCardModule,
     MatListModule,
     RouterModule,
     CommonModule,
-    ProjectsComponent,
-    ContactComponent,
-    MatRipple,
-    MatTable,
-    MatHeaderCell,
-    MatCell,
-    MatHeaderRow,
-    MatRow,
-    MatColumnDef,
-    MatHeaderCellDef,
-    MatCellDef,
-    MatHeaderRowDef,
-    MatRowDef,
     MatGridList,
     MatGridTile,
+    MatRipple,
+    ContactComponent,
   ],
   providers: [
     ThemeService,
