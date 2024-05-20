@@ -1,3 +1,4 @@
+import {ThemeService} from "../../services/theme.service";
 import {Component} from '@angular/core';
 
 @Component({
@@ -6,6 +7,9 @@ import {Component} from '@angular/core';
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
+
+  constructor(public themeService: ThemeService) {
+  }
   dataSource = [
     {image: 'https://material.angular.io/assets/img/examples/shiba2.jpg', title: 'Project 3', year: '2024', description: 'Description 3'},
     {image: 'https://material.angular.io/assets/img/examples/shiba2.jpg', title: 'Project 2', year: '2024', description: 'Description 2'},

@@ -15,6 +15,12 @@
   font-weight: 900;
 }
 
+@keyframes glitch {
+  50% {
+    transform: skew(180deg);
+  }
+}
+
 @media (max-width: 768px) {
   .home-theme {
     justify-content: center;

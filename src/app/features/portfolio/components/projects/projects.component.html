@@ -1,21 +1,23 @@
-<div class="projects">
-  <div class="titel">
-    <h1>Projects</h1>
-  </div>
-  <div class="cards">
-    <div class="card" *ngFor="let card of dataSource">
-      <mat-card>
-        <img mat-card-image src="{{ card.image }}">
-        <mat-card-header>
-          <mat-card-title>{{ card.title }}</mat-card-title>
-          <mat-card-subtitle>{{ card.year }}</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <p>
-            {{ card.description }}
-          </p>
-        </mat-card-content>
-      </mat-card>
+<div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }">
+  <div class="projects">
+    <div class="titel">
+      <h1>Projects</h1>
+    </div>
+    <div class="cards">
+      <div class="card" *ngFor="let card of dataSource">
+        <mat-card>
+          <img mat-card-image src="{{ card.image }}" alt="Title">
+          <mat-card-header>
+            <mat-card-title>{{ card.title }}</mat-card-title>
+            <mat-card-subtitle>{{ card.year }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              {{ card.description }}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
     </div>
   </div>
 </div>
