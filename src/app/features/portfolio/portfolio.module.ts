@@ -24,6 +24,7 @@ import {RouterModule} from "@angular/router";
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import { ModalComponent } from './components/contact/modal/modal.component';
+import {MatDialogActions, MatDialogContent, MatDialogTitle} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -56,6 +57,9 @@ import { ModalComponent } from './components/contact/modal/modal.component';
     MatGridList,
     MatGridTile,
     MatRipple,
+    MatDialogContent,
+    MatDialogTitle,
+    MatDialogActions,
   ],
   providers: [
     ScrollService,

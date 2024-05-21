@@ -29,7 +29,7 @@ export class ContactComponent {
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(ModalComponent, {
-      width: '250px',
+      width: '450px',
       enterAnimationDuration,
       exitAnimationDuration,
     });

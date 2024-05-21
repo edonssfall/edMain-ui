@@ -2,7 +2,9 @@
   <footer class='footer'>
     <div class='footer-content'>
       <div class='contact-info'>
-        <button mat-raised-button (click)="openDialog('500ms', '500ms')">Open dialog slowly</button>
+        <button (click)="openDialog('500ms', '500ms')">
+          Get in touch with me
+        </button>
       </div>
       <div class='social-links'>
         <a class="icon-github" mat-icon-button href='{{environment.contact.github}}' target='_blank'

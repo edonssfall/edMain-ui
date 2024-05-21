@@ -1,11 +1,14 @@
-<div>
-  <button mat-button (click)='copyToClipboard("{{environment.contact.phone}}")'>
-    Phone: {{ environment.contact.phone }}
+<h2 mat-dialog-title>Contact</h2>
+<mat-dialog-content>
+  <p>For any questions or concerns, please contact me at the following sources:</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)='copyToClipboard("{{environment.contact.phone}}")'>Phone: {{ environment.contact.phone }}
   </button>
-  <a mat-button href='mailto:{{environment.contact.email}}'>
+  <button mat-button><a mat-button href='mailto:{{environment.contact.email}}'>
     Email: {{ environment.contact.email }}
-  </a>
-</div>
+  </a></button>
+</mat-dialog-actions>
 <div class="notification">
   <span *ngIf='showNotification'>{{ notificationMessage }}</span>
 </div>

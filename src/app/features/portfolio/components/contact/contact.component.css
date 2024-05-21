@@ -23,6 +23,10 @@
   align-items: center;
 }
 
+.contact-info button {
+  background: var(--primary-bg-color);
+}
+
 .contact-info button, .contact-info a {
   margin-right: 25px;
   color: white;
