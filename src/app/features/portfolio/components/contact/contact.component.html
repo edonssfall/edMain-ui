@@ -2,12 +2,7 @@
   <footer class='footer'>
     <div class='footer-content'>
       <div class='contact-info'>
-        <button mat-button (click)='copyToClipboard("{{environment.contact.phone}}")'>
-          Phone: {{ environment.contact.phone }}
-        </button>
-        <a mat-button href='mailto:{{environment.contact.email}}'>
-          Email: {{ environment.contact.email }}
-        </a>
+        <button mat-raised-button (click)="openDialog('500ms', '500ms')">Open dialog slowly</button>
       </div>
       <div class='social-links'>
         <a class="icon-github" mat-icon-button href='{{environment.contact.github}}' target='_blank'
@@ -20,6 +15,5 @@
         </a>
       </div>
     </div>
-    <span class='notification' *ngIf='showNotification'>{{ notificationMessage }}</span>
   </footer>
 </div>

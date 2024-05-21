@@ -23,6 +23,7 @@ import {MatRipple} from "@angular/material/core";
 import {RouterModule} from "@angular/router";
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
+import { ModalComponent } from './components/contact/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {NgModule} from '@angular/core';
     AboutComponent,
     HomeComponent,
     MeComponent,
+    ModalComponent,
   ],
   exports: [
     PortfolioComponent,

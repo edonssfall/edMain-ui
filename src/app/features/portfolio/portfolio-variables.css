@@ -4,7 +4,7 @@
   --primary-text-color: #000000;
   --dark-text-color: #ffffff;
   --primary-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.9);
-  --dark-box-shadow: 0 10px 10px rgba(255, 255, 255, 0.4);
+  --dark-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.9);
   --h1-font-size: 2.5rem;
   --h3-font-size: 1.2rem;
 }

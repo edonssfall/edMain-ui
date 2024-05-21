@@ -38,27 +38,11 @@
   color: white;
 }
 
-.notification {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: var(--primary-bg-color);
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-}
-
 .icons {
   scale: 1.5;
 }
 
-.icon-github:hover {
-  transform: scale(1.7);
-  transition: 0.4s;
-  filter: drop-shadow(0 0 0.75rem white);
-}
-
-.icon-linkedin:hover {
+.icon-github:hover, .icon-linkedin:hover {
   transform: scale(1.7);
   transition: 0.4s;
   filter: drop-shadow(0 0 0.75rem white);

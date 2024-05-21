@@ -1,0 +1,11 @@
+<div>
+  <button mat-button (click)='copyToClipboard("{{environment.contact.phone}}")'>
+    Phone: {{ environment.contact.phone }}
+  </button>
+  <a mat-button href='mailto:{{environment.contact.email}}'>
+    Email: {{ environment.contact.email }}
+  </a>
+</div>
+<div class="notification">
+  <span *ngIf='showNotification'>{{ notificationMessage }}</span>
+</div>

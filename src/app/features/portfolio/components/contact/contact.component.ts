@@ -3,6 +3,8 @@ import {Component} from '@angular/core';
 import {environment} from "../../../../environments/environment";
 import {MatIconRegistry} from "@angular/material/icon";
 import {DomSanitizer} from "@angular/platform-browser";
+import {ModalComponent} from "./modal/modal.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-contact',
@@ -10,12 +12,10 @@ import {DomSanitizer} from "@angular/platform-browser";
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
-  showNotification = false;
-  notificationMessage = '';
-
   constructor(private iconRegistry: MatIconRegistry,
               private sanitizer: DomSanitizer,
-              public themeService: ThemeService) {
+              public themeService: ThemeService,
+              public dialog: MatDialog) {
     const assetsPath = 'assets/portfolio/icons/';
     iconRegistry.addSvgIcon(
       'github',
@@ -27,15 +27,11 @@ export class ContactComponent {
     );
   }
 
-  copyToClipboard(text: string): void {
-    navigator.clipboard.writeText(text).then(() => {
-      this.notificationMessage = 'Phone number copied to clipboard!';
-      this.showNotification = true;
-      setTimeout(() => this.showNotification = false, 3000);
-    }, () => {
-      this.notificationMessage = 'Failed to copy phone number!';
-      this.showNotification = true;
-      setTimeout(() => this.showNotification = false, 3000);
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(ModalComponent, {
+      width: '250px',
+      enterAnimationDuration,
+      exitAnimationDuration,
     });
   }
 
