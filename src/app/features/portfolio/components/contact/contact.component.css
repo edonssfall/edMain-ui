@@ -25,6 +25,11 @@
 
 .contact-info button {
   background: var(--primary-bg-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+}
+
+.dark-theme .contact-info button {
+  background: var(--dark-bg-color);
 }
 
 .contact-info button, .contact-info a {

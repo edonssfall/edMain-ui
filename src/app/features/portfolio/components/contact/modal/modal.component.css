@@ -2,13 +2,15 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: var(--primary-bg-color);
+  background: green;
   color: white;
   padding: 10px;
   border-radius: 5px;
   box-shadow: var(--primary-box-shadow);
 }
 
-.dark-theme .notification {
-  background-color: var(--dark-bg-color);
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }

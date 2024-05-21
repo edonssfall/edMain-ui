@@ -1,5 +1,5 @@
 import {environment} from "../../../../../environments/environment";
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -14,7 +14,7 @@ export class ModalComponent {
     navigator.clipboard.writeText(text).then(() => {
       this.notificationMessage = 'Phone number copied to clipboard!';
       this.showNotification = true;
-      setTimeout(() => this.showNotification = false, 3000);
+      setTimeout(() => this.showNotification = false, 300000);
     }, () => {
       this.notificationMessage = 'Failed to copy phone number!';
       this.showNotification = true;

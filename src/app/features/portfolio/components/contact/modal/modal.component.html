@@ -2,13 +2,12 @@
 <mat-dialog-content>
   <p>For any questions or concerns, please contact me at the following sources:</p>
 </mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-button (click)='copyToClipboard("{{environment.contact.phone}}")'>Phone: {{ environment.contact.phone }}
+<mat-dialog-actions class="buttons">
+  <button mat-button (click)='copyToClipboard("{{environment.contact.phone}}")'>
+    {{ environment.contact.phone }}
   </button>
-  <button mat-button><a mat-button href='mailto:{{environment.contact.email}}'>
-    Email: {{ environment.contact.email }}
+  <button mat-button><a mat-button href='mailto:{{environment.contact.email}}'>{{ environment.contact.email }}
   </a></button>
 </mat-dialog-actions>
-<div class="notification">
-  <span *ngIf='showNotification'>{{ notificationMessage }}</span>
-</div>
+
+<span *ngIf='showNotification' class="notification">{{ notificationMessage }}</span>

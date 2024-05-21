@@ -33,10 +33,10 @@ import {MatDialogActions, MatDialogContent, MatDialogTitle} from "@angular/mater
     ProjectsComponent,
     ContactComponent,
     TableComponent,
+    ModalComponent,
     AboutComponent,
     HomeComponent,
     MeComponent,
-    ModalComponent,
   ],
   exports: [
     PortfolioComponent,
