@@ -1,8 +1,7 @@
-import {EducationComponent} from './components/about/education/education.component';
 import {NavigationComponent} from './components/navigation/navigation.component';
 import {ProjectsComponent} from "./components/projects/projects.component";
+import { TableComponent } from './components/about/table/table.component';
 import {ContactComponent} from "./components/contact/contact.component";
-import {WorkComponent} from './components/about/work/work.component';
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 import {PortfolioRoutingModule} from "./portfolio-routing.module";
 import {AboutComponent} from "./components/about/about.component";
@@ -12,8 +11,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {PortfolioComponent} from "./portfolio.component";
+import {ScrollService} from "./services/scroll.service";
 import {MatTableModule} from "@angular/material/table";
 import {ThemeService} from "./services/theme.service";
+import {HttpClientModule} from "@angular/common/http";
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
@@ -22,22 +23,17 @@ import {MatRipple} from "@angular/material/core";
 import {RouterModule} from "@angular/router";
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {ScrollService} from "./services/scroll.service";
-import {HttpClientModule} from "@angular/common/http";
-import { TableComponent } from './components/about/table/table.component';
 
 @NgModule({
   declarations: [
     NavigationComponent,
-    EducationComponent,
     PortfolioComponent,
     ProjectsComponent,
     ContactComponent,
+    TableComponent,
     AboutComponent,
-    WorkComponent,
     HomeComponent,
     MeComponent,
-    TableComponent,
   ],
   exports: [
     PortfolioComponent,
