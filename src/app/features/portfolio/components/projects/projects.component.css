@@ -43,4 +43,6 @@
   color: #777777;
 }
 
-
+.mat-mdc-card-actions {
+  justify-content: end;
+}

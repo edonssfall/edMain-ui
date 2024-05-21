@@ -14,39 +14,39 @@ export class ProjectsComponent {
 
   dataSource: IProjects[] = [
     {
+      image: './assets/portfolio/images/angular-17.svg',
+      title: 'Angular Portfolio',
+      subTitel: 'Front-end Angular TypeScript',
+      description: 'Description 1',
+      github: 'https://github.com/edonssfall/edMain-ui',
+    },
+    {
       image: './assets/portfolio/images/microservices.webp',
       title: 'Microservice Architecture',
-      subTitel: '2024 Docker Nginx',
+      subTitel: 'Docker Nginx',
       description: 'Description 3',
       github: 'https://github.com/edonssfall/edDeplyment',
     },
     {
+      image: './assets/portfolio/images/react-chat-app.webp',
+      title: 'React Chat App TypeScript',
+      subTitel: 'Front-end React',
+      description: 'Description 1',
+      github: 'https://github.com/edonssfall/edChat-ui',
+    },
+    {
       image: './assets/portfolio/images/django-channels.png',
       title: 'Django Channels',
-      subTitel: '2024 Backend Django Python',
+      subTitel: 'Backend Django Python',
       description: 'Description 2',
       github: 'https://github.com/edonssfall/edWebsockets-BE',
     },
     {
       image: './assets/portfolio/images/django-authentication.png',
       title: 'Django Authentication',
-      subTitel: '2024 Backend Django Python',
+      subTitel: 'Backend Django Python',
       description: 'Description 1',
       github: 'https://github.com/edonssfall/edAuth-BE',
-    },
-    {
-      image: './assets/portfolio/images/angular-17.svg',
-      title: 'Angular Portfolio',
-      subTitel: '2024 Front-end Angular TypeScript',
-      description: 'Description 1',
-      github: 'https://github.com/edonssfall/edMain-ui',
-    },
-    {
-      image: './assets/portfolio/images/react-chat-app.webp',
-      title: 'React Chat App TypeScript',
-      subTitel: '2024 Front-end React',
-      description: 'Description 1',
-      github: 'https://github.com/edonssfall/edChat-ui',
     },
   ]
 }
