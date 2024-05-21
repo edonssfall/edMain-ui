@@ -24,6 +24,7 @@ import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {ScrollService} from "./services/scroll.service";
 import {HttpClientModule} from "@angular/common/http";
+import { TableComponent } from './components/about/table/table.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {HttpClientModule} from "@angular/common/http";
     WorkComponent,
     HomeComponent,
     MeComponent,
+    TableComponent,
   ],
   exports: [
     PortfolioComponent,

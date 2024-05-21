@@ -1,3 +1,4 @@
+import {ThemeService} from "../../../services/theme.service";
 import {Component} from '@angular/core';
 
 @Component({
@@ -6,6 +7,9 @@ import {Component} from '@angular/core';
   styleUrl: './work.component.css'
 })
 export class WorkComponent {
+  constructor(public themeService: ThemeService) {
+  }
+
   dataSource = [
     {name: 'TIE International Bern', year: '2023 Aug. -.', location: 'Deiswill, Bern', status: 'On going'},
     {name: 'Immo View', year: '2023 Feb. - 2023 Jul.', location: 'Online, Ukraine', status: 'Closed'},

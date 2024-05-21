@@ -1,6 +1,8 @@
+@import 'portfolio-variables.css';
+
 .dark-theme {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #171616;
+    color: var(--dark-text-color);
 }
 
 @media (max-width: 768px) {
@@ -15,6 +17,17 @@
   right: 15px;
   opacity: 0;
   transition: all 0.2s ease-in-out;
+  background-color: var(--primary-bg-color);
+  box-shadow: var(--primary-box-shadow);
+}
+
+.dark-theme .scroll-to-top {
+  background-color: var(--dark-bg-color);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.2);
 }
 
 .show-scrollTop {

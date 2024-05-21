@@ -1,15 +1,15 @@
 .footer {
-  background-color: #3f51b5;
+  background-color: var(--primary-bg-color);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.9);
+  box-shadow: var(--primary-box-shadow);
 }
 
 .dark-theme .footer {
-  background-color: #121212;
-  box-shadow: 0 10px 15px rgba(255, 255, 255, 0.3);
+  background-color: var(--dark-bg-color);
+  box-shadow: var(--dark-box-shadow);
 }
 
 .footer-content {
@@ -42,7 +42,7 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #323232;
+  background-color: var(--primary-bg-color);
   color: white;
   padding: 10px;
   border-radius: 5px;

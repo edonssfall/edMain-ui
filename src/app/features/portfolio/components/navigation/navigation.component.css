@@ -1,20 +1,20 @@
 .menu-toolbar {
-  background-color: #3f51b5;
+  background-color: var(--primary-bg-color);
   width: 100%;
   display: flex;
-  color: white;
+  color: var(--dark-text-color);
   justify-content: space-between;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--primary-box-shadow);
 }
 
 .menu-toolbar .center-section a {
   text-decoration: none;
-  color: white;
+  color: var(--dark-text-color);
 }
 
 .dark-theme .menu-toolbar {
-  background-color: #121212;
-  box-shadow: 0 10px 15px rgba(255, 255, 255, 0.3);
+  background-color: var(--dark-bg-color);
+  box-shadow: var(--dark-box-shadow);
 }
 
 .left-section {
