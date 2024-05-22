@@ -1,4 +1,4 @@
-<div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }">
+<div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }" id="projects">
   <div class="projects">
     <div class="titel">
       <h1>Projects</h1>
@@ -17,7 +17,7 @@
             </p>
           </mat-card-content>
           <mat-card-actions>
-            <a mat-button href="https://github.com/your-github-username/your-repository" target="_blank">
+            <a mat-button href="{{ card.github }}" target="_blank">
               <mat-icon svgIcon="github"></mat-icon> GitHub
             </a>
           </mat-card-actions>

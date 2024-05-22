@@ -1,5 +1,6 @@
 import {ThemeService} from "../../services/theme.service";
-import {Component} from '@angular/core';
+import {Component, ElementRef, HostListener, ViewChild} from '@angular/core';
+import {MatSidenav} from "@angular/material/sidenav";
 
 @Component({
   selector: 'app-navigation',
@@ -7,16 +8,25 @@ import {Component} from '@angular/core';
   styleUrl: './navigation.component.css'
 })
 export class NavigationComponent {
-  constructor(public themeService: ThemeService) {
+  @ViewChild('sidenav') sidenav!: MatSidenav;
+
+  constructor(public themeService: ThemeService,
+              private eRef: ElementRef) {
   }
 
   toggleTheme() {
-    const isDarkTheme = !this.themeService.currentTheme.isDark;
-    this.themeService.changeTheme(isDarkTheme)
-    document.body.classList.toggle('dark-theme', isDarkTheme);
+    this.themeService.changeTheme(!this.themeService.currentTheme.isDark)
+    document.body.classList.toggle('dark-theme', !this.themeService.currentTheme.isDark);
   }
 
   changeLanguage(language: string) {
     // Implement language change logic here
+  }
+
+  @HostListener('document:click', ['$event'])
+  onClick(event: Event) {
+    if (this.sidenav.opened && !this.eRef.nativeElement.contains(event.target)) {
+      this.sidenav.close();
+    }
   }
 }

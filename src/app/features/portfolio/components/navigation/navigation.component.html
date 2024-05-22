@@ -1,41 +1,65 @@
 <div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }">
-<mat-toolbar class="menu-toolbar">
-  <div class="left-section">
-    <span>My Portfolio</span>
-  </div>
-  <div class="center-section">
-    <div class="menu-item">
-      <a href="#home">
-        Home
-      </a>
+  <mat-toolbar class="menu-toolbar">
+    <div class="left-section">
+      <span>edonssfall</span>
     </div>
-    <div class="menu-item">
-      <a href="#about">
-        About Me
-      </a>
-    </div>
-    <div class="menu-item">
-      <a href="#projects">
-        Projects
-      </a>
-    </div>
-    <div class="menu-item">
-      <a href="#contact">
-        Contact Me
-      </a>
-    </div>
-  </div>
-  <div class="right-section">
-    <button mat-icon-button (click)="toggleTheme()">
-      <mat-icon>{{ this.themeService.currentTheme.isDark ? 'brightness_4' : 'brightness_7' }}</mat-icon>
+    <button mat-icon-button (click)="sidenav.toggle()" class="menu-toggle-button">
+      <mat-icon>menu</mat-icon>
     </button>
-    <button mat-icon-button [matMenuTriggerFor]="langMenu">
-      <mat-icon>language</mat-icon>
-    </button>
-    <mat-menu #langMenu="matMenu">
-      <button mat-menu-item (click)="changeLanguage('en')">English</button>
-      <button mat-menu-item (click)="changeLanguage('de')">German</button>
-    </mat-menu>
-  </div>
-</mat-toolbar>
+    <div class="center-section">
+      <div class="menu-item">
+        <a href="#home">Home</a>
+      </div>
+      <div class="menu-item">
+        <a href="#about">About Me</a>
+      </div>
+      <div class="menu-item">
+        <a href="#projects">Projects</a>
+      </div>
+      <div class="menu-item">
+        <a href="#contact">Contact Me</a>
+      </div>
+    </div>
+    <div class="right-section">
+      <button mat-icon-button (click)="toggleTheme()">
+        <mat-icon>{{ this.themeService.currentTheme.isDark ? 'brightness_4' : 'brightness_7' }}</mat-icon>
+      </button>
+      <button mat-icon-button [matMenuTriggerFor]="langMenu">
+        <mat-icon>language</mat-icon>
+      </button>
+      <mat-menu #langMenu="matMenu">
+        <button mat-menu-item (click)="changeLanguage('en')">English</button>
+        <button mat-menu-item (click)="changeLanguage('de')">German</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav #sidenav class="sidenav" mode="over" (keydown.esc)="sidenav.close()">
+    <mat-nav-list class="sidenav-content">
+      <a mat-list-item href="#home" (click)="sidenav.close()">
+        <h1>Home</h1>
+      </a>
+      <a mat-list-item href="#about" (click)="sidenav.close()">
+        <h1>About Me</h1>
+      </a>
+      <a mat-list-item href="#projects" (click)="sidenav.close()">
+        <h1>Projects</h1>
+      </a>
+      <a mat-list-item href="#contact" (click)="sidenav.close()">
+        <h1>Contact Me</h1>
+      </a>
+      <div class="buttons">
+        <button mat-icon-button (click)="toggleTheme()">
+          <mat-icon>{{ themeService.currentTheme.isDark ? 'brightness_4' : 'brightness_7' }}</mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="langMenu">
+          <mat-icon>language</mat-icon>
+        </button>
+        <mat-menu #langMenu="matMenu">
+          <button mat-menu-item (click)="changeLanguage('en')">English</button>
+          <button mat-menu-item (click)="changeLanguage('de')">German</button>
+        </mat-menu>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
 </div>

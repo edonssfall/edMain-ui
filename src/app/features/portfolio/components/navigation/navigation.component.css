@@ -12,7 +12,7 @@
   color: var(--dark-text-color);
 }
 
-.dark-theme .menu-toolbar {
+.dark-theme .menu-toolbar, .dark-theme .sidenav {
   background-color: var(--dark-bg-color);
   box-shadow: var(--dark-box-shadow);
 }
@@ -63,4 +63,48 @@
 .right-section {
   display: flex;
   align-items: center;
+}
+
+.sidenav {
+  position: fixed;
+  padding: 20px;
+  height: 100vh;
+  width: 300px;
+  background: var(--primary-bg-color);
+  box-shadow: var(--primary-box-shadow);
+}
+
+.sidenav-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  height: 95%;
+  justify-content: center;
+  color: var(--dark-text-color);
+}
+
+.menu-toggle-button {
+  display: none;
+  cursor: pointer;
+}
+
+.sidenav-content h1 {
+  color: var(--dark-text-color);
+}
+
+.sidenav-content h1:hover {
+  transform: scale(1.2);
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .menu-toolbar .center-section,
+  .menu-toolbar .right-section {
+    display: none;
+  }
+
+  .menu-toggle-button {
+    display: block;
+  }
 }
