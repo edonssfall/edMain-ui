@@ -2,7 +2,8 @@
   <div class="text-section">
     <h1 data-text="Welcome to My Portfolio">Yow!</h1>
     <h1 data-text="Your Name">My name is Leonid Tsarov</h1>
-    <h1 style="display: flex" data-text="Your Profession">I am a <h1 class="glitch">{{ text }}</h1></h1>
-
+    <h1 style="display: flex" data-text="Your Profession">I am a
+      <h1 class="glitch" [ngStyle]="{ 'text-decoration': text === 'Designer' ? 'line-through' : 'none' }">{{ text }}</h1>
+    </h1>
   </div>
 </div>

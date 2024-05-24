@@ -38,6 +38,21 @@
   color: #777777;
 }
 
-.mat-mdc-card-actions {
-  justify-content: end;
+.space-between {
+  justify-content: space-between;
+}
+
+.end {
+  justify-content: flex-end;
+
+}
+
+.mat-card-actions {
+  display: flex;
+  width: 100%;
+  padding: 8px 16px;
+}
+
+.icon-github {
+  scale: 1.2;
 }
