@@ -17,6 +17,7 @@ export class NavigationComponent {
   toggleTheme() {
     this.themeService.changeTheme(!this.themeService.currentTheme.isDark)
     document.body.classList.toggle('dark-theme', !this.themeService.currentTheme.isDark);
+    this.sidenav.close();
   }
 
   changeLanguage(language: string) {
