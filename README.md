@@ -1,27 +1,50 @@
 # EdMainUi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+This project is a basic Angular application built using TypeScript and Angular Material UI.
 
-## Development server
+## Features:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular version: Angular 17.3.9
+- Angular Material version: Angular Material X.X.X
+- TypeScript version: TypeScript X.X.X
+- Responsive design
+- Services usage example
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the repository:
 
-## Build
+    ```bash
+    git clone <repository_url>
+    ```
+2. Navigate into the project directory:
+    ```bash
+   cd ed-main-ui
+   ```
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+### Usage
+To run the development server, use the following command:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+ng serve
+```
 
-## Running unit tests
+Navigate to http://localhost:4200/ in your web browser. The app will automatically reload if you change any of the
+source files.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Services
+This project demonstrates the usage of Angular services. Services are used to encapsulate shared business logic, data
+access, or communication logic. In this project, services are located in the src/app/services directory.
 
-## Running end-to-end tests
+To create a new service, use the Angular CLI:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+ng generate service app/core/services/new-service
+```
+Replace my-service with the name of your service.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Example
+For a live example of this project, visit [Example Link](https://main.tsarov.cc).
