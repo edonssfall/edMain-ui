@@ -7,9 +7,11 @@
 }
 
 .image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 90%;
   width: 100%;
-  align-content: center;
 }
 
 .image-section img {
@@ -39,7 +41,10 @@
 
   .image-section {
     height: 55%;
-    align-content: center;
+  }
+
+  .text-section {
+    padding-left: 20vw;
   }
 
   .text-section h1 {
