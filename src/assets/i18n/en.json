@@ -48,6 +48,14 @@
       "project4": {
         "title": "Django Authentication",
         "description": "Developed an authentication system using Django and Django REST Framework. Provided secure user registration, login, and token-based authentication for API access. Focused on building a robust and secure backend to manage user data and authentication processes efficiently."
+      },
+      "project5": {
+        "title": "Gesunde Tomogochis",
+        "description": "This project is an interactive web application built using HTML, CSS, and JavaScript. It showcases modern web development techniques and provides users with a responsive and dynamic user experience. The application is designed to be user-friendly, visually appealing, and functionally rich, leveraging the capabilities of each technology to its fullest."
+      },
+      "project6": {
+        "title": "IMDB",
+        "description": "This project is a full-featured web application built using a powerful stack of modern technologies: Django, Vue.js, Docker, Nginx, and PostgreSQL. Designed to deliver a robust and scalable solution, this application showcases the integration of a reliable backend, a dynamic frontend, and efficient deployment practices."
       }
     },
     "contact": {

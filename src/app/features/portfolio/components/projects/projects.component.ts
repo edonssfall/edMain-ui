@@ -31,14 +31,25 @@ export class ProjectsComponent {
       github: 'https://github.com/edonssfall/edChat-ui',
     },
     {
+      image: './assets/portfolio/images/django-authentication.png',
+      subTitel: 'Backend Django Python PostgreSQL',
+      github: 'https://github.com/edonssfall/edAuth-BE',
+    },
+    {
       image: './assets/portfolio/images/django-channels.png',
-      subTitel: 'Backend Django Python',
+      subTitel: 'Backend Django Python Redis',
       github: 'https://github.com/edonssfall/edWebsockets-BE',
     },
     {
-      image: './assets/portfolio/images/django-authentication.png',
-      subTitel: 'Backend Django Python',
-      github: 'https://github.com/edonssfall/edAuth-BE',
+      image: './assets/portfolio/images/gesunde-tomogochis.png',
+      subTitel: 'HTML CSS JavaScript',
+      preview: 'https://edonssfall.github.io/GesundeTomagochis/index.html',
+      github: 'https://github.com/edonssfall/GesundeTomagochis',
     },
+    {
+      image: './assets/portfolio/images/imdb.jpg',
+      subTitel: 'Vue JavaScript Python Django PostgreSQL Docker Nginx',
+      github: 'https://github.com/edonssfall/IMDB',
+    }
   ]
 }
