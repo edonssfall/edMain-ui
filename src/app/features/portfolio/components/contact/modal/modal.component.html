@@ -1,6 +1,6 @@
-<h2 mat-dialog-title>Contact</h2>
+<h2 mat-dialog-title>{{ 'portfolio.contact.modal.title' | translate }}</h2>
 <mat-dialog-content>
-  <p>For any questions or concerns, please contact me at the following sources:</p>
+  <p>{{ 'portfolio.contact.modal.text' | translate }}</p>
 </mat-dialog-content>
 <mat-dialog-actions class="buttons">
   <button mat-button (click)='copyToClipboard("{{environment.contact.phone}}")'>

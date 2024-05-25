@@ -4,16 +4,16 @@
       <h1>Projects</h1>
     </div>
     <div class="cards">
-      <div class="card" *ngFor="let card of dataSource">
+      <div class="card" *ngFor="let card of dataSource; let i = index">
         <mat-card>
           <img mat-card-image src="{{ card.image }}" alt="Title">
           <mat-card-header>
-            <mat-card-title>{{ card.title }}</mat-card-title>
+            <mat-card-title>{{ 'portfolio.projects.project' + i + '.title' | translate }}</mat-card-title>
             <mat-card-subtitle>{{ card.subTitel }}</mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
             <p>
-              {{ card.description }}
+              {{ 'portfolio.projects.project' + i + '.description' | translate }}
             </p>
           </mat-card-content>
           <mat-card-actions [ngClass]="{'space-between': card.preview, 'end': !card.preview}">
