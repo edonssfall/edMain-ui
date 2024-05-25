@@ -9,6 +9,7 @@
 .image-section {
   height: 90%;
   width: 100%;
+  align-content: center;
 }
 
 .image-section img {
