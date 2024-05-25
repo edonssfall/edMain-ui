@@ -15,7 +15,7 @@ This project is a basic Angular application built using TypeScript and Angular M
 1. Clone the repository:
 
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/edonssfall/edMain-ui.git
     ```
 2. Navigate into the project directory:
     ```bash
