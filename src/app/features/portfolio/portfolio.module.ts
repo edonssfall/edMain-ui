@@ -21,11 +21,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from "@angular/material/card";
+import {TranslateModule} from "@ngx-translate/core";
 import {MatRipple} from "@angular/material/core";
 import {RouterModule} from "@angular/router";
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
@@ -42,27 +42,27 @@ import {TranslateModule} from "@ngx-translate/core";
   exports: [
     PortfolioComponent,
   ],
-    imports: [
-        PortfolioRoutingModule,
-        MatDialogActions,
-        MatSidenavModule,
-        MatDialogContent,
-        HttpClientModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatDialogTitle,
-        MatTableModule,
-        MatIconModule,
-        MatMenuModule,
-        MatCardModule,
-        MatListModule,
-        RouterModule,
-        CommonModule,
-        MatGridList,
-        MatGridTile,
-        MatRipple,
-        TranslateModule,
-    ],
+  imports: [
+    PortfolioRoutingModule,
+    MatDialogActions,
+    MatSidenavModule,
+    MatDialogContent,
+    HttpClientModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatDialogTitle,
+    MatTableModule,
+    MatIconModule,
+    MatMenuModule,
+    MatCardModule,
+    MatListModule,
+    RouterModule,
+    CommonModule,
+    MatGridList,
+    MatGridTile,
+    MatRipple,
+    TranslateModule,
+  ],
   providers: [
     ScrollService,
     ThemeService,

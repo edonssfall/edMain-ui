@@ -1,16 +1,29 @@
 .home-theme {
   height: 100vh;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  position: relative;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.image-section {
+  height: 90%;
+  width: 100%;
+}
+
+.image-section img {
+  height: 85%;
 }
 
 .text-section {
-  padding: 0 150px;
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.text-section h1 {
+.text-section h1 {;
   font-size: 3rem;
 }
 
@@ -20,14 +33,15 @@
 
 @media (max-width: 768px) {
   .home-theme {
-    justify-content: center;
+    flex-direction: column;
   }
 
-  .text-section {
-    padding: 0 20px;
+  .image-section {
+    height: 55%;
+    align-content: center;
   }
 
   .text-section h1 {
-    font-size: 2.1rem;
+    font-size: 2rem;
   }
 }
