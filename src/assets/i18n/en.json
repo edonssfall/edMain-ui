@@ -1,0 +1,14 @@
+{
+  "portfolio": {
+    "navigation": {
+      "home": "Home",
+      "about": "About Me",
+      "projects": "Projects",
+      "contact": "Contact Me"
+    },
+    "home": {
+      "title": "Yow!",
+      "name": "My name is "
+    }
+  }
+}

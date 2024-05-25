@@ -1,5 +1,5 @@
 const localStorage = {
-  theme: 'theme',
+  theme: 'isDark',
   language: 'lang',
 }
 

@@ -8,16 +8,16 @@
     </button>
     <div class="center-section">
       <div class="menu-item">
-        <a href="#home">Home</a>
+        <a href="#home">{{ 'portfolio.navigation.home' | translate}}</a>
       </div>
       <div class="menu-item">
-        <a href="#about">About Me</a>
+        <a href="#about">{{'portfolio.navigation.about' | translate}}</a>
       </div>
       <div class="menu-item">
-        <a href="#projects">Projects</a>
+        <a href="#projects">{{ 'portfolio.navigation.projects' | translate}}</a>
       </div>
       <div class="menu-item">
-        <a href="#contact">Contact Me</a>
+        <a href="#contact">{{'portfolio.navigation.contact' | translate}}</a>
       </div>
     </div>
     <div class="right-section">
@@ -29,7 +29,7 @@
       </button>
       <mat-menu #langMenu="matMenu">
         <button mat-menu-item (click)="changeLanguage('en')">English</button>
-        <button mat-menu-item (click)="changeLanguage('de')">German</button>
+        <button mat-menu-item (click)="changeLanguage('de')">Deutsch</button>
       </mat-menu>
     </div>
   </mat-toolbar>
@@ -37,16 +37,16 @@
   <mat-sidenav #sidenav class="sidenav" mode="over" (keydown.esc)="sidenav.close()">
     <mat-nav-list class="sidenav-content">
       <a mat-list-item href="#home" (click)="sidenav.close()">
-        <h1>Home</h1>
+        <h1>{{ 'portfolio.navigation.home' | translate}}</h1>
       </a>
       <a mat-list-item href="#about" (click)="sidenav.close()">
-        <h1>About Me</h1>
+        <h1>{{ 'portfolio.navigation.about' | translate }}</h1>
       </a>
       <a mat-list-item href="#projects" (click)="sidenav.close()">
-        <h1>Projects</h1>
+        <h1>{{ 'portfolio.navigation.projects' | translate}}</h1>
       </a>
       <a mat-list-item href="#contact" (click)="sidenav.close()">
-        <h1>Contact Me</h1>
+        <h1>{{ 'portfolio.navigation.contact' | translate}}</h1>
       </a>
       <div class="buttons">
         <button mat-icon-button (click)="toggleTheme()">
@@ -57,7 +57,7 @@
         </button>
         <mat-menu #langMenu="matMenu">
           <button mat-menu-item (click)="changeLanguage('en')">English</button>
-          <button mat-menu-item (click)="changeLanguage('de')">German</button>
+          <button mat-menu-item (click)="changeLanguage('de')">Deutsch</button>
         </mat-menu>
       </div>
     </mat-nav-list>

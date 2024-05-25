@@ -8,7 +8,7 @@ export class LanguageService implements OnInit {
   localName = environment.localStorage.language;
   languages: Language[] = [
     {name: 'English', code: 'en'},
-    {name: 'Deutsch', code: 'de'}
+    {name: 'German', code: 'de'}
   ];
   currentLanguage: Language = this.languages[0];
 
@@ -26,9 +26,9 @@ export class LanguageService implements OnInit {
     }
   }
 
-  changeLanguage(language: Language = this.currentLanguage) {
-    localStorage.setItem(this.localName, JSON.stringify(language));
-    this.translate.use(language.code);
-    this.currentLanguage = <Language>this.languages.find(lang => lang.code === language.code)
+  changeLanguage(language: string = this.currentLanguage.code) {
+    this.currentLanguage = <Language>this.languages.find(lang => lang.code === language)
+    this.translate.use(this.currentLanguage.code);
+    localStorage.setItem(this.localName, JSON.stringify(this.currentLanguage));
   }
 }

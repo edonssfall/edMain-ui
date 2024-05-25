@@ -1,5 +1,6 @@
-import {ThemeService} from "../../services/theme.service";
+import {LanguageService} from "../../../../core/services/language.service";
 import {Component, ElementRef, HostListener, ViewChild} from '@angular/core';
+import {ThemeService} from "../../services/theme.service";
 import {MatSidenav} from "@angular/material/sidenav";
 
 @Component({
@@ -10,7 +11,8 @@ import {MatSidenav} from "@angular/material/sidenav";
 export class NavigationComponent {
   @ViewChild('sidenav') sidenav!: MatSidenav;
 
-  constructor(public themeService: ThemeService,
+  constructor(private languageService: LanguageService,
+              public themeService: ThemeService,
               private eRef: ElementRef) {
   }
 
@@ -21,7 +23,8 @@ export class NavigationComponent {
   }
 
   changeLanguage(language: string) {
-    // Implement language change logic here
+    this.languageService.changeLanguage(language);
+    this.sidenav.close();
   }
 
   @HostListener('document:click', ['$event'])

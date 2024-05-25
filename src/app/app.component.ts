@@ -7,12 +7,10 @@ import {Component, OnInit} from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  constructor(
-    // private languageService: LanguageService,
-  ) {
+  constructor(private languageService: LanguageService) {
   }
 
   ngOnInit() {
-    // this.languageService.ngOnInit();
+    this.languageService.ngOnInit();
   }
 }
