@@ -6,8 +6,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  text = 'Web Developer';
-  textArray = ['Web Developer', 'Backend Developer', 'Student', 'Designer'];
+  text = 'web';
+  textArray = ['web', 'backend', 'student', 'designer'];
   currentIndex = 0;
 
   ngOnInit() {

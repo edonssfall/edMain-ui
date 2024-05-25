@@ -8,7 +8,12 @@
     },
     "home": {
       "title": "Yow!",
-      "name": "My name is "
+      "name": "My name is",
+      "intro": "I'm a",
+      "web": "Web Developer",
+      "backend": "Backend Developer",
+      "student": "Student",
+      "designer": "Designer"
     }
   }
 }

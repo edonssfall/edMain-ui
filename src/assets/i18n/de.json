@@ -4,7 +4,16 @@
       "home": "Haus",
       "about": "Über mich",
       "projects": "Projekte",
-      "contact": "Kontaktieren mich",
+      "contact": "Kontaktieren mich"
+    },
+    "home": {
+      "title": "Salue!",
+      "name": "Ich heisse",
+      "intro": "Ich bin",
+      "web": "Web-Entwickler",
+      "backend": "Backend-Entwickler",
+      "student": "Student",
+      "designer": "Designer"
     }
   }
 }
