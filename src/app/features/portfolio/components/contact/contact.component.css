@@ -1,0 +1,58 @@
+.footer {
+  background-color: var(--primary-bg-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--primary-box-shadow);
+}
+
+.dark-theme .footer {
+  background-color: var(--dark-bg-color);
+  box-shadow: var(--dark-box-shadow);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact-info, .social-links {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info button {
+  background: var(--primary-bg-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+}
+
+.dark-theme .contact-info button {
+  background: var(--dark-bg-color);
+}
+
+.contact-info button, .contact-info a {
+  margin-right: 25px;
+  color: white;
+}
+
+.contact-info button:hover, .contact-info a:hover {
+  transform: scale(1.2);
+  transition: 0.4s;
+}
+
+.social-links a {
+  margin-left: 10px;
+  color: white;
+}
+
+.icons {
+  scale: 1.5;
+}
+
+.icon-github:hover, .icon-linkedin:hover {
+  transform: scale(1.7);
+  transition: 0.4s;
+  filter: drop-shadow(0 0 0.75rem white);
+}

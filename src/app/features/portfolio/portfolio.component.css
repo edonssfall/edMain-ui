@@ -1,0 +1,45 @@
+@import 'portfolio-variables.css';
+
+.dark-theme {
+    background-color: #171616;
+    color: var(--dark-text-color);
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--primary-bg-color);
+  color: var(--dark-text-color);
+  box-shadow: var(--primary-box-shadow);
+}
+
+.dark-theme .scroll-to-top {
+  background-color: var(--dark-bg-color);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.2);
+}
+
+.show-scrollTop {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.scroll-to-top.footer-adjust {
+  bottom: 100px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .scroll-to-top.footer-adjust {
+    bottom: 95px
+  }
+}

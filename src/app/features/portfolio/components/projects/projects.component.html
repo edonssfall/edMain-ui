@@ -1,0 +1,33 @@
+<div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }" id="projects">
+  <div class="projects">
+    <div class="titel">
+      <h1>{{ 'portfolio.projects.title' | translate }}</h1>
+    </div>
+    <div class="cards">
+      <div class="card" *ngFor="let card of dataSource; let i = index">
+        <mat-card>
+          <img mat-card-image src="{{ card.image }}" alt="Title">
+          <mat-card-header>
+            <mat-card-title>{{ 'portfolio.projects.project' + i + '.title' | translate }}</mat-card-title>
+            <mat-card-subtitle>{{ card.subTitel }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              {{ 'portfolio.projects.project' + i + '.description' | translate }}
+            </p>
+          </mat-card-content>
+          <mat-card-actions [ngClass]="{'space-between': card.preview, 'end': !card.preview}">
+            <div *ngIf="card.preview">
+              <a mat-button href="{{ card.preview }}" target="_blank">
+                Preview
+              </a>
+            </div>
+            <a class="icon-github" mat-button href="{{ card.github }}" target="_blank">
+              <mat-icon svgIcon="github"></mat-icon> GitHub
+            </a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

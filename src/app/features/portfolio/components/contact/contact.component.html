@@ -1,0 +1,21 @@
+<div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }" id="contact">
+  <footer class='footer'>
+    <div class='footer-content'>
+      <div class='contact-info'>
+        <button mat-flat-button (click)="openDialog('500ms', '500ms')">
+          <div>{{ 'portfolio.contact.button' | translate }}</div>
+        </button>
+      </div>
+      <div class='social-links'>
+        <a class="icon-github" mat-icon-button href='{{environment.contact.github}}' target='_blank'
+           aria-label='GitHub'>
+          <mat-icon class="icons" svgIcon="github"></mat-icon>
+        </a>
+        <a class="icon-linkedin" mat-icon-button href='{{environment.contact.linkedin}}}' target='_blank'
+           aria-label='LinkedIn'>
+          <mat-icon class="icons" svgIcon="linkedin">business_center</mat-icon>
+        </a>
+      </div>
+    </div>
+  </footer>
+</div>

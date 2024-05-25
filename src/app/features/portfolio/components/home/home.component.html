@@ -1,0 +1,13 @@
+<div id="home" class="home-theme">
+  <div class="image-section">
+    <img src="assets/portfolio/images/leonid.png" alt="Leonid Tsarov"/>
+  </div>
+  <div class="text-section">
+    <h1 data-text="Welcome to My Portfolio">{{ 'portfolio.home.title' | translate }}</h1>
+    <h1 data-text="Your Name">{{ 'portfolio.home.name' | translate }} Leonid Tsarov</h1>
+    <h1 style="display: flex" data-text="Your Profession">{{ 'portfolio.home.intro' | translate }}
+      <h1 class="glitch" [ngStyle]="{ 'text-decoration': text === 'designer' ? 'line-through' : 'none' }">
+        {{ 'portfolio.home.' + text  | translate }}</h1>
+    </h1>
+  </div>
+</div>

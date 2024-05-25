@@ -1,0 +1,4 @@
+ h3 {
+  font-size: var(--h3-font-size);
+  text-align: left;
+}

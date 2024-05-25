@@ -1,0 +1,16 @@
+<div class="about-section" id="about">
+  <div class="section">
+    <h1>{{ 'portfolio.about.title1' | translate }}</h1>
+    <app-me></app-me>
+  </div>
+
+  <div class="section">
+    <h1>{{ 'portfolio.about.work' | translate}}</h1>
+    <app-table [dataSource]="workExperience"></app-table>
+  </div>
+
+  <div class="section">
+    <h1>{{ 'portfolio.about.education' | translate }}</h1>
+    <app-table [dataSource]="educationExperience"></app-table>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: green;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: var(--primary-box-shadow);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
