@@ -35,6 +35,15 @@ ng serve
 Navigate to http://localhost:4200/ in your web browser. The app will automatically reload if you change any of the
 source files.
 
+### Usage Production
+1. Copy .env.example to prod.env and set the environment variables.
+    ```bash
+    cp .env.example prod.env
+    ```
+2. Build the project:
+    ```bash
+    docker build -t ed-main-ui .
+    ```
 ### Services
 This project demonstrates the usage of Angular services. Services are used to encapsulate shared business logic, data
 access, or communication logic. In this project, services are located in the src/app/services directory.
