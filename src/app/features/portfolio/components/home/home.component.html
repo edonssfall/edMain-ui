@@ -5,9 +5,11 @@
   <div class="text-section">
     <h1 data-text="Welcome to My Portfolio">{{ 'portfolio.home.title' | translate }}</h1>
     <h1 data-text="Your Name">{{ 'portfolio.home.name' | translate }} Leonid Tsarov</h1>
-    <h1 style="display: flex" data-text="Your Profession">{{ 'portfolio.home.intro' | translate }}
-      <h1 class="glitch" [ngStyle]="{ 'text-decoration': text === 'designer' ? 'line-through' : 'none' }">
-        {{ 'portfolio.home.' + text  | translate }}</h1>
-    </h1>
+    <div class="animated-text">
+      <h1 data-text="Your Profession">{{ 'portfolio.home.intro' | translate }}
+        <h1 [ngStyle]="{ 'text-decoration': text === 'designer' ? 'line-through' : 'none' }">
+          {{ 'portfolio.home.' + text  | translate }}</h1>
+      </h1>
+    </div>
   </div>
 </div>

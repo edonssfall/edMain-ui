@@ -43,14 +43,14 @@
 }
 
 .menu-item:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   opacity: 1;
   cursor: pointer;
   z-index: 10;
 }
 
 .menu-item:hover + .menu-item {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: 0.4s;
 }
 
@@ -97,7 +97,7 @@
   transition: 0.4s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .menu-toolbar .center-section,
   .menu-toolbar .right-section {
     display: none;
