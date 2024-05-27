@@ -1,15 +1,22 @@
-<div id="home" class="home-theme">
-  <div class="image-section">
-    <img src="assets/portfolio/images/leonid.png" alt="Leonid Tsarov"/>
-  </div>
-  <div class="text-section">
-    <h1 data-text="Welcome to My Portfolio">{{ 'portfolio.home.title' | translate }}</h1>
-    <h1 data-text="Your Name">{{ 'portfolio.home.name' | translate }} Leonid Tsarov</h1>
-    <div class="animated-text">
-      <h1 data-text="Your Profession">{{ 'portfolio.home.intro' | translate }}
-        <h1 [ngStyle]="{ 'text-decoration': text === 'designer' ? 'line-through' : 'none' }">
-          {{ 'portfolio.home.' + text  | translate }}</h1>
-      </h1>
+<div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }">
+  <div #homeSection class="home-theme">
+    <div class="image-section">
+      <img src="assets/portfolio/images/leonid.png" alt="Leonid Tsarov"/>
+    </div>
+    <div class="text-section">
+      <h1 data-text="Welcome to My Portfolio">{{ 'portfolio.home.title' | translate }}</h1>
+      <div class="animated-text">
+        <h1 data-text="Your Name">{{ 'portfolio.home.name' | translate }}
+          <h1 class="name">Leonid Tsarov</h1>
+        </h1>
+      </div>
+      <div class="animated-text">
+        <h1 data-text="Your Profession">{{ 'portfolio.home.intro' | translate }}
+          <h1 [ngStyle]="{ 'text-decoration': text === 'designer' ? 'line-through' : 'none' }">
+            {{ 'portfolio.home.' + text  | translate }}</h1>
+        </h1>
+      </div>
+      <app-contact-buttons class="contacts"></app-contact-buttons>
     </div>
   </div>
 </div>

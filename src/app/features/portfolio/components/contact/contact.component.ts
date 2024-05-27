@@ -1,10 +1,8 @@
-import {ThemeService} from "../../services/theme.service";
-import {Component} from '@angular/core';
 import {environment} from "../../../../environments/environment";
+import {ThemeService} from "../../services/theme.service";
 import {MatIconRegistry} from "@angular/material/icon";
 import {DomSanitizer} from "@angular/platform-browser";
-import {ModalComponent} from "./modal/modal.component";
-import {MatDialog} from "@angular/material/dialog";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -14,8 +12,7 @@ import {MatDialog} from "@angular/material/dialog";
 export class ContactComponent {
   constructor(private iconRegistry: MatIconRegistry,
               private sanitizer: DomSanitizer,
-              public themeService: ThemeService,
-              public dialog: MatDialog) {
+              public themeService: ThemeService) {
     const assetsPath = 'assets/portfolio/icons/';
     iconRegistry.addSvgIcon(
       'github',
@@ -25,14 +22,6 @@ export class ContactComponent {
       'linkedin',
       sanitizer.bypassSecurityTrustResourceUrl(`${assetsPath}linkedin.svg`)
     );
-  }
-
-  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(ModalComponent, {
-      width: '370px',
-      enterAnimationDuration,
-      exitAnimationDuration,
-    });
   }
 
   protected readonly environment = environment;

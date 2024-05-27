@@ -1,7 +1,6 @@
-import {MatDialogActions, MatDialogContent, MatDialogTitle} from "@angular/material/dialog";
+import { ContactButtonsComponent } from './components/contact/contact-buttons/contact-buttons.component';
 import {NavigationComponent} from './components/navigation/navigation.component';
 import {ProjectsComponent} from "./components/projects/projects.component";
-import {ModalComponent} from './components/contact/modal/modal.component';
 import {TableComponent} from './components/about/table/table.component';
 import {ContactComponent} from "./components/contact/contact.component";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
@@ -29,12 +28,12 @@ import {NgModule} from '@angular/core';
 
 @NgModule({
   declarations: [
+    ContactButtonsComponent,
     NavigationComponent,
     PortfolioComponent,
     ProjectsComponent,
     ContactComponent,
     TableComponent,
-    ModalComponent,
     AboutComponent,
     HomeComponent,
     MeComponent,
@@ -44,13 +43,11 @@ import {NgModule} from '@angular/core';
   ],
   imports: [
     PortfolioRoutingModule,
-    MatDialogActions,
     MatSidenavModule,
-    MatDialogContent,
     HttpClientModule,
     MatToolbarModule,
+    TranslateModule,
     MatButtonModule,
-    MatDialogTitle,
     MatTableModule,
     MatIconModule,
     MatMenuModule,
@@ -61,7 +58,6 @@ import {NgModule} from '@angular/core';
     MatGridList,
     MatGridTile,
     MatRipple,
-    TranslateModule,
   ],
   providers: [
     ScrollService,

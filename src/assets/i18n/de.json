@@ -1,11 +1,9 @@
 {
   "portfolio": {
     "navigation": {
-      "home": "Haus",
+      "home": "Start Seite",
       "about": "Über mich",
-      "projects": "Projekte",
-      "contact": "Kontaktieren mich",
-      "cv": "Lebenslauf herunterladen"
+      "projects": "Projekte"
     },
     "home": {
       "title": "Salü!",
@@ -14,7 +12,10 @@
       "web": "Web-Entwickler",
       "backend": "Backend-Entwickler",
       "student": "Student",
-      "designer": "Designer"
+      "designer": "Designer",
+      "cv": "Lebenslauf",
+      "success": "Phone number copied to clipboard!",
+      "error": "Telefonnummer konnte nicht kopiert werden!"
     },
     "about": {
       "title1": "Über mich",

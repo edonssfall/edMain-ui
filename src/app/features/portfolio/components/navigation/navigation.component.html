@@ -1,26 +1,19 @@
 <div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }">
   <mat-toolbar class="menu-toolbar">
-    <div class="left-section">
-      <span>edonssfall</span>
-    </div>
-    <button mat-icon-button (click)="sidenav.toggle()" class="menu-toggle-button">
-      <mat-icon>menu</mat-icon>
-    </button>
+
+    <div class="spacer"></div>
     <div class="center-section">
       <div class="menu-item">
-        <a href="#home">{{ 'portfolio.navigation.home' | translate}}</a>
+        <a
+          (click)="scrollService.scrollToElement(scrollService.homeSection)">{{ 'portfolio.navigation.home' | translate }}</a>
       </div>
       <div class="menu-item">
-        <a href="#about">{{'portfolio.navigation.about' | translate}}</a>
+        <a
+          (click)="scrollService.scrollToElement(scrollService.aboutSection)">{{ 'portfolio.navigation.about' | translate }}</a>
       </div>
       <div class="menu-item">
-        <a href="#projects">{{ 'portfolio.navigation.projects' | translate}}</a>
-      </div>
-      <div class="menu-item">
-        <a href="assets/portfolio/pdfs/CV_Leonid_Tsarov.pdf" target="_blank">{{ 'portfolio.navigation.cv' | translate }}</a>
-      </div>
-      <div class="menu-item">
-        <a href="#contact">{{'portfolio.navigation.contact' | translate}}</a>
+        <a
+          (click)="scrollService.scrollToElement(scrollService.projectsSection)">{{ 'portfolio.navigation.projects' | translate }}</a>
       </div>
     </div>
     <div class="right-section">
@@ -35,24 +28,21 @@
         <button mat-menu-item (click)="changeLanguage('de')">Deutsch</button>
       </mat-menu>
     </div>
+    <button mat-icon-button (click)="sidenav.toggle()" class="menu-toggle-button">
+      <mat-icon>menu</mat-icon>
+    </button>
   </mat-toolbar>
 
   <mat-sidenav #sidenav class="sidenav" mode="over" (keydown.esc)="sidenav.close()">
     <mat-nav-list class="sidenav-content">
-      <a mat-list-item href="#home" (click)="sidenav.close()">
-        <h1>{{ 'portfolio.navigation.home' | translate}}</h1>
+      <a mat-list-item (click)="sidenav.close(); scrollService.scrollToElement(scrollService.homeSection)">
+        <h1>{{ 'portfolio.navigation.home' | translate }}</h1>
       </a>
-      <a mat-list-item href="#about" (click)="sidenav.close()">
+      <a mat-list-item (click)="sidenav.close(); scrollService.scrollToElement(scrollService.aboutSection)">
         <h1>{{ 'portfolio.navigation.about' | translate }}</h1>
       </a>
-      <a mat-list-item href="#projects" (click)="sidenav.close()">
-        <h1>{{ 'portfolio.navigation.projects' | translate}}</h1>
-      </a>
-      <a mat-list-item href="assets/portfolio/pdfs/CV_Leonid_Tsarov.pdf">
-        <h1>{{ 'portfolio.navigation.cv' | translate }}</h1>
-      </a>
-      <a mat-list-item href="#contact" (click)="sidenav.close()">
-        <h1>{{ 'portfolio.navigation.contact' | translate}}</h1>
+      <a mat-list-item (click)="sidenav.close(); scrollService.scrollToElement(scrollService.projectsSection)">
+        <h1>{{ 'portfolio.navigation.projects' | translate }}</h1>
       </a>
       <div class="buttons">
         <button mat-icon-button (click)="toggleTheme()">

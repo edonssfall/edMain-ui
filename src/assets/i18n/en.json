@@ -3,9 +3,7 @@
     "navigation": {
       "home": "Home",
       "about": "About Me",
-      "projects": "Projects",
-      "contact": "Contact Me",
-      "cv": "CV Download"
+      "projects": "Projects"
     },
     "home": {
       "title": "Yow!",
@@ -14,7 +12,10 @@
       "web": "Web Developer",
       "backend": "Backend Developer",
       "student": "Student",
-      "designer": "Designer"
+      "designer": "Designer",
+      "cv": "CV Download",
+      "success": "Phone number copied to clipboard!",
+      "error": "Failed to copy phone number!"
     },
     "about": {
       "title1": "About Me",

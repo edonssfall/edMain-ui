@@ -3,6 +3,9 @@ import { BehaviorSubject } from 'rxjs';
 export class ScrollService {
   private scrollPosition = new BehaviorSubject<number>(0);
   private windowHeight = new BehaviorSubject<number>(window.innerHeight);
+  public homeSection!: HTMLElement;
+  public aboutSection!: HTMLElement;
+  public projectsSection!: HTMLElement;
 
   constructor() {
     window.addEventListener('scroll', () => {
@@ -11,6 +14,12 @@ export class ScrollService {
     window.addEventListener('resize', () => {
       this.windowHeight.next(window.innerHeight);
     });
+  }
+
+  scrollToElement(element: HTMLElement) {
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
   getScrollPosition() {
