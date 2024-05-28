@@ -1,24 +1,12 @@
-import {environment} from "../../../../../environments/environment";
-import {ThemeService} from "../../../services/theme.service";
-import {Component} from '@angular/core';
-
-@Component({
-  selector: 'app-contact-buttons',
-  templateUrl: './contact-buttons.component.html',
-  styleUrl: './contact-buttons.component.css'
-})
-export class ContactButtonsComponent {
+export class ContactService {
   showNotification = false;
   notificationMessage = '';
 
-  constructor(public themeService: ThemeService) {
-  }
-
-  copyToClipboard(text: string): void {
+  phoneToClipboard(text: string): void {
     navigator.clipboard.writeText(text).then(() => {
       this.notificationMessage = 'portfolio.home.success';
       this.showNotification = true;
-      setTimeout(() => this.showNotification = false, 300000);
+      setTimeout(() => this.showNotification = false, 3000);
     }, () => {
       this.notificationMessage = 'portfolio.home.error';
       this.showNotification = true;
@@ -26,7 +14,7 @@ export class ContactButtonsComponent {
     });
   }
 
-  downloadFile() {
+  downloadCV() {
     const fileUrl = 'assets/portfolio/pdfs/CV_Leonid_Tsarov.pdf';
     const fileName = 'CV_Leonid_Tsarov.pdf';
 
@@ -38,6 +26,4 @@ export class ContactButtonsComponent {
     link.click();
     document.body.removeChild(link);
   }
-
-  protected readonly environment = environment;
 }

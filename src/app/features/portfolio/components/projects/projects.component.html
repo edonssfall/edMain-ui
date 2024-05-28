@@ -6,7 +6,10 @@
     <div class="cards">
       <div class="card" *ngFor="let card of dataSource; let i = index">
         <mat-card>
-          <img mat-card-image src="{{ card.image }}" alt="Title">
+          <a *ngIf="card.preview" href="{{ card.preview }}">
+            <img mat-card-image src="{{ card.image }}" alt="Title">
+          </a>
+          <img *ngIf="!card.preview" mat-card-image src="{{ card.image }}" alt="Title">
           <mat-card-header>
             <mat-card-title>{{ 'portfolio.projects.project' + i + '.title' | translate }}</mat-card-title>
             <mat-card-subtitle>{{ card.subTitel }}</mat-card-subtitle>
@@ -18,7 +21,7 @@
           </mat-card-content>
           <mat-card-actions [ngClass]="{'space-between': card.preview, 'end': !card.preview}">
             <div *ngIf="card.preview">
-              <a mat-button href="{{ card.preview }}" target="_blank">
+              <a class="buttons" mat-button href="{{ card.preview }}" target="_blank">
                 Preview
               </a>
             </div>

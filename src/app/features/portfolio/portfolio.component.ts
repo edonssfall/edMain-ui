@@ -1,6 +1,7 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {ThemeService} from "./services/theme.service";
+import {ContactService} from "./services/contact.service";
 import {ScrollService} from "./services/scroll.service";
+import {ThemeService} from "./services/theme.service";
 
 @Component({
   selector: 'app-portfolio',
@@ -12,6 +13,7 @@ export class PortfolioComponent implements OnInit {
   footerAdjust = false
 
   constructor(public themeService: ThemeService,
+              public contactService: ContactService,
               private scrollService: ScrollService) {
   }
 

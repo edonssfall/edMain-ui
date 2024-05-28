@@ -1,0 +1,28 @@
+<div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }">
+  <footer class='footer'>
+    <div class='footer-content'>
+      <div class="contact">
+        <button mat-button (click)='contactService.phoneToClipboard("{{environment.contact.phone}}")'>
+          <a>{{ environment.contact.phone }}</a>
+        </button>
+        <button mat-button>
+          <a mat-button href='mailto:{{environment.contact.email}}'>{{ environment.contact.email }}</a>
+        </button>
+        <button mat-raised-button class="buttons" (click)="contactService.downloadCV()">
+          <mat-icon>download</mat-icon>
+          {{ 'portfolio.home.cv' | translate }}
+        </button>
+      </div>
+      <div class='social-links'>
+        <a class="icon-github" mat-icon-button href='{{environment.contact.github}}' target='_blank'
+           aria-label='GitHub'>
+          <mat-icon class="icons" svgIcon="github"></mat-icon>
+        </a>
+        <a class="icon-linkedin" mat-icon-button href='{{environment.contact.linkedin}}}' target='_blank'
+           aria-label='LinkedIn'>
+          <mat-icon class="icons" svgIcon="linkedin">business_center</mat-icon>
+        </a>
+      </div>
+    </div>
+  </footer>
+</div>

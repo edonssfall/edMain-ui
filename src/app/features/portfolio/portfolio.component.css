@@ -1,5 +1,17 @@
 @import 'portfolio-variables.css';
 
+.notification {
+  position: fixed;
+  top: 8vh;
+  right: 20px;
+  background: green;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: var(--primary-box-shadow);
+  z-index: 10000;
+}
+
 .dark-theme {
     background-color: #171616;
     color: var(--dark-text-color);
