@@ -1,0 +1,20 @@
+<mat-sidenav-container class="sidenav-container">
+  <span *ngIf='contactService.showNotification'
+        class="notification">{{ contactService.notificationMessage | translate }}</span>
+  <div [ngClass]="{ 'dark-theme': this.themeService.currentTheme.isDark }">
+    <app-navigation></app-navigation>
+
+    <div class="container">
+      <app-home></app-home>
+      <app-about></app-about>
+      <app-projects></app-projects>
+    </div>
+
+    <button mat-fab class="scroll-to-top" [ngClass]="{'show-scrollTop': isScrollToTopVisible}" (click)="scrollToTop()"
+            [class.scroll-to-top-show]="isScrollToTopVisible" [class.footer-adjust]="footerAdjust">
+      <mat-icon>keyboard_arrow_up</mat-icon>
+    </button>
+
+    <app-footer></app-footer>
+  </div>
+</mat-sidenav-container>

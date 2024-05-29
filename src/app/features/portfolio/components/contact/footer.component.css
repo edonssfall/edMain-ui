@@ -1,0 +1,49 @@
+.footer {
+  background-color: var(--primary-bg-color);
+  padding-top: 10px;
+  padding-bottom: -5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--primary-box-shadow);
+}
+
+.dark-theme .footer {
+  background-color: var(--dark-bg-color);
+  box-shadow: var(--dark-box-shadow);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact-info, .social-links {
+  display: flex;
+  align-items: center;
+}
+
+.contact a, button {
+  color: var(--dark-text-color);
+}
+
+.social-links {
+  padding-right: 10px;
+  padding-bottom: 2px;
+}
+
+.social-links a {
+  margin-left: 10px;
+  color: white;
+}
+
+.icons {
+  scale: 1.7;
+}
+
+.icon-github:hover, .icon-linkedin:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+  filter: drop-shadow(0 0 0.75rem white);
+}

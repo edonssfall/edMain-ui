@@ -1,0 +1,12 @@
+h3 {
+  font-size: var(--h3-font-size);
+  text-align: left;
+}
+
+a {
+  color: var(--primary-text-color);
+}
+
+.dark-theme a {
+  color: var(--dark-text-color);
+}

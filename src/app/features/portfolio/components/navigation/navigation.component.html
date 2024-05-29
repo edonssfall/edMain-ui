@@ -1,0 +1,61 @@
+<div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }">
+  <mat-toolbar class="menu-toolbar">
+
+    <div class="spacer"></div>
+    <div class="center-section">
+      <div class="menu-item">
+        <a
+          (click)="scrollService.scrollToElement(scrollService.homeSection)">{{ 'portfolio.navigation.home' | translate }}</a>
+      </div>
+      <div class="menu-item">
+        <a
+          (click)="scrollService.scrollToElement(scrollService.aboutSection)">{{ 'portfolio.navigation.about' | translate }}</a>
+      </div>
+      <div class="menu-item">
+        <a
+          (click)="scrollService.scrollToElement(scrollService.projectsSection)">{{ 'portfolio.navigation.projects' | translate }}</a>
+      </div>
+    </div>
+    <div class="right-section">
+      <button mat-icon-button (click)="toggleTheme()">
+        <mat-icon>{{ this.themeService.currentTheme.isDark ? 'brightness_4' : 'brightness_7' }}</mat-icon>
+      </button>
+      <button mat-icon-button [matMenuTriggerFor]="langMenu">
+        <mat-icon>language</mat-icon>
+      </button>
+      <mat-menu #langMenu="matMenu">
+        <button mat-menu-item (click)="changeLanguage('en')">English</button>
+        <button mat-menu-item (click)="changeLanguage('de')">Deutsch</button>
+      </mat-menu>
+    </div>
+    <button mat-icon-button (click)="sidenav.toggle()" class="menu-toggle-button">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <mat-sidenav #sidenav class="sidenav" mode="over" (keydown.esc)="sidenav.close()">
+    <mat-nav-list class="sidenav-content">
+      <a mat-list-item (click)="sidenav.close(); scrollService.scrollToElement(scrollService.homeSection)">
+        <h1>{{ 'portfolio.navigation.home' | translate }}</h1>
+      </a>
+      <a mat-list-item (click)="sidenav.close(); scrollService.scrollToElement(scrollService.aboutSection)">
+        <h1>{{ 'portfolio.navigation.about' | translate }}</h1>
+      </a>
+      <a mat-list-item (click)="sidenav.close(); scrollService.scrollToElement(scrollService.projectsSection)">
+        <h1>{{ 'portfolio.navigation.projects' | translate }}</h1>
+      </a>
+      <div class="buttons">
+        <button mat-icon-button (click)="toggleTheme()">
+          <mat-icon>{{ themeService.currentTheme.isDark ? 'brightness_4' : 'brightness_7' }}</mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="langMenu">
+          <mat-icon>language</mat-icon>
+        </button>
+        <mat-menu #langMenu="matMenu">
+          <button mat-menu-item (click)="changeLanguage('en')">English</button>
+          <button mat-menu-item (click)="changeLanguage('de')">Deutsch</button>
+        </mat-menu>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+</div>

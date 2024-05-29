@@ -1,0 +1,70 @@
+{
+  "portfolio": {
+    "navigation": {
+      "home": "Start Seite",
+      "about": "Über mich",
+      "projects": "Projekte"
+    },
+    "home": {
+      "title": "Salü!",
+      "name": "Ich heisse",
+      "intro": "Ich bin",
+      "web": "Web-Entwickler",
+      "backend": "Backend-Entwickler",
+      "student": "Student",
+      "designer": "Designer",
+      "cv": "Lebenslauf",
+      "success": "Phone number copied to clipboard!",
+      "error": "Telefonnummer konnte nicht kopiert werden!"
+    },
+    "about": {
+      "title1": "Über mich",
+      "text1.1": "Vom Funken eines kreativen Konzepts bis zum Nervenkitzel eines funktionierenden Programms hat die Softwareentwicklung immer meine Leidenschaft entfacht. Meine Erfahrungen bei",
+      "text1.2": "war eine Startrampe für sinnvolle Projekte, bei denen ich meine Fähigkeiten kontinuierlich verfeinern und mein technisches Wissen erweitern konnte.",
+      "text2": "hat mir eine solide Grundlage geboten und mir gleichzeitig die Anpassungsfähigkeit und Teamarbeit vermittelt, die in der heutigen dynamischen Umgebung unerlässlich sind. Ich fühle mich unter Druck wohl und setze innovatives Denken ein, um die sich verändernden Anforderungen zu bewältigen. Die wahre Magie liegt darin, komplexe Ideen in praktische, effiziente Lösungen zu verwandeln - das ist es, was mich am Programmieren antreibt.",
+      "text3": "Jenseits des Codes finde ich ständige Inspiration in der Erforschung neuer Technologien und in der Verfolgung persönlicher Projekte. Ein gesundes Gleichgewicht ist der Schlüssel, und die Zeit mit Freunden ermöglicht es mir, meinen kreativen Geist aufzuladen.",
+      "work": "Arbeit Erfahrung",
+      "education": "Bildung",
+      "ongoing": "Aktuell",
+      "completed": "Abgeschlossen"
+    },
+    "projects": {
+      "title": "Projekte",
+      "project0": {
+        "title": "Angular Portfolio",
+        "description": "Entwicklung eines persönlichen Portfolios mit Angular, mit Unterstützung für zwei Sprachen und einem Umschalter für den dunklen Modus. Implementierung der Internationalisierung, um sicherzustellen, dass die Inhalte in mehreren Sprachen zugänglich sind. Verbessertes Benutzererlebnis durch ein schlankes, modernes Design und einen nahtlosen Übergang in den dunklen Modus."
+      },
+      "project1": {
+        "title": "Microservice Architektur",
+        "description": "Dieses Projekt demonstriert eine Microservice-Architektur mit Docker Compose und NGINX als Reverse Proxy. Ziel ist es, mehrere Dienste, wie Webanwendungen und APIs, bereitzustellen, auf die unter einer einzigen Domain zugegriffen werden kann. NGINX dient als Reverse Proxy und leitet Anfragen auf der Grundlage der URL-Pfade an die entsprechenden Dienste weiter."
+      },
+      "project2": {
+        "title": "React Chat App TypeScript",
+        "description": "Erstellung einer Chat-Anwendung mit React, die eine benutzerfreundliche Schnittstelle für Echtzeit-Nachrichten bietet. Integrierte Zustandsverwaltung und komponentenbasierte Architektur, um effiziente und reaktionsschnelle Interaktionen zu gewährleisten. Der Schwerpunkt lag auf der Bereitstellung eines nahtlosen Chat-Erlebnisses mit dynamischen Updates und reibungsloser Leistung."
+      },
+      "project3": {
+        "title": "Django Kanäle",
+        "description": "Implementierung einer Echtzeit-Chat-Anwendung mit Django Channels. Nutzung von WebSockets zur Erleichterung der sofortigen Kommunikation zwischen Benutzern. Gewährleistung von Skalierbarkeit und Leistung, so dass mehrere Benutzer gleichzeitig an Live-Unterhaltungen teilnehmen können."
+      },
+      "project4": {
+        "title": "Django Authentifizierung",
+        "description": "Implementierung einer Echtzeit-Chat-Anwendung mit Django Channels. Nutzung von WebSockets zur Erleichterung der sofortigen Kommunikation zwischen Benutzern. Gewährleistung von Skalierbarkeit und Leistung, so dass mehrere Benutzer gleichzeitig an Live-Unterhaltungen teilnehmen können.Implementiert eine Echtzeit-Chat-Anwendung mit Django Channels. Nutzung von WebSockets zur Erleichterung der sofortigen Kommunikation zwischen den Benutzern. Gewährleistung von Skalierbarkeit und Leistung, so dass mehrere Benutzer gleichzeitig an Live-Unterhaltungen teilnehmen können."
+      },
+      "project5": {
+        "title": "Gesunde Tomogochis",
+        "description": "Dieses Projekt ist eine interaktive Webanwendung, die mit HTML, CSS und JavaScript erstellt wurde. Es zeigt moderne Web-Entwicklungstechniken und bietet den Benutzern eine reaktionsfähige und dynamische Benutzererfahrung. Die Anwendung ist benutzerfreundlich, visuell ansprechend und funktionell reichhaltig und nutzt die Möglichkeiten jeder Technologie voll aus."
+      },
+      "project6": {
+        "title": "IMDB",
+        "description": "Bei diesem Projekt handelt es sich um eine voll funktionsfähige Webanwendung, die mit einem leistungsstarken Stapel moderner Technologien erstellt wurde: Django, Vue.js, Docker, Nginx und PostgreSQL. Diese Anwendung wurde entwickelt, um eine robuste und skalierbare Lösung zu liefern und zeigt die Integration eines zuverlässigen Backends, eines dynamischen Frontends und effizienter Bereitstellungspraktiken."
+      }
+    },
+    "contact": {
+      "button": "Nehmen Sie Kontakt mit mir auf",
+      "modal": {
+        "title": "Kontaktieren mich",
+        "text": "Bei Fragen oder Anliegen wenden Sie sich bitte an mich unter den folgenden Adressen:"
+      }
+    }
+  }
+}

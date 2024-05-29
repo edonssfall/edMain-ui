@@ -1,0 +1,70 @@
+{
+  "portfolio": {
+    "navigation": {
+      "home": "Home",
+      "about": "About Me",
+      "projects": "Projects"
+    },
+    "home": {
+      "title": "Yow!",
+      "name": "My name is",
+      "intro": "I'm a",
+      "web": "Web Developer",
+      "backend": "Backend Developer",
+      "student": "Student",
+      "designer": "Designer",
+      "cv": "CV Download",
+      "success": "Phone number copied to clipboard!",
+      "error": "Failed to copy phone number!"
+    },
+    "about": {
+      "title1": "About Me",
+      "text1.1": "From the spark of a creative concept to the thrill of a working program, software development has always ignited my passion. My experience at",
+      "text1.2": "has been a launchpad for meaningful projects, where I've continuously honed my skills and expanded my technical knowledge.",
+      "text2": "has provided a strong foundation, while also instilling in me the adaptability and teamwork essential in today's dynamic environments. I thrive under pressure, using innovative thinking to tackle evolving requirements. The true magic lies in transforming complex ideas into practical, efficient solutions – that's what keeps me fueled by programming.",
+      "text3": "Beyond the code, I find constant inspiration in exploring new technologies and pursuing personal projects. Striking a healthy balance is key, and quality time with friends allows me to recharge my creative spirit.",
+      "work": "Berufserfahrung",
+      "education": "Education",
+      "ongoing": "On-going",
+      "completed": "Completed"
+    },
+    "projects": {
+      "title": "Projects",
+      "project0": {
+        "title": "Angular Portfolio",
+        "description": "Developed a personal portfolio using Angular, featuring support for two languages and a dark mode toggle. Implemented internationalization to ensure content is accessible in multiple languages. Enhanced user experience with a sleek, modern design and seamless dark mode transition."
+      },
+      "project1": {
+        "title": "Microservice Architecture",
+        "description": "This project demonstrates a microservice architecture using Docker Compose and NGINX as a reverse proxy. The goal is to deploy multiple services, such as web applications and APIs, which can be accessed under a single domain. NGINX will serve as the reverse proxy, routing requests to the appropriate services based on the URL paths."
+      },
+      "project2": {
+        "title": "React Chat App",
+        "description": "Created a chat application using React, providing a user-friendly interface for real-time messaging. Incorporated state management and component-based architecture to ensure efficient and responsive interactions. Focused on delivering a seamless chat experience with dynamic updates and smooth performance."
+      },
+      "project3": {
+        "title": "Django Channels",
+        "description": "Implemented a real-time chat application using Django Channels. Leveraged WebSockets to facilitate instant communication between users. Ensured scalability and performance, enabling multiple users to engage in live conversations simultaneously."
+      },
+      "project4": {
+        "title": "Django Authentication",
+        "description": "Developed an authentication system using Django and Django REST Framework. Provided secure user registration, login, and token-based authentication for API access. Focused on building a robust and secure backend to manage user data and authentication processes efficiently."
+      },
+      "project5": {
+        "title": "Gesunde Tomogochis",
+        "description": "This project is an interactive web application built using HTML, CSS, and JavaScript. It showcases modern web development techniques and provides users with a responsive and dynamic user experience. The application is designed to be user-friendly, visually appealing, and functionally rich, leveraging the capabilities of each technology to its fullest."
+      },
+      "project6": {
+        "title": "IMDB",
+        "description": "This project is a full-featured web application built using a powerful stack of modern technologies: Django, Vue.js, Docker, Nginx, and PostgreSQL. Designed to deliver a robust and scalable solution, this application showcases the integration of a reliable backend, a dynamic frontend, and efficient deployment practices."
+      }
+    },
+    "contact": {
+      "button": "Get in touch with me",
+      "modal": {
+        "title": "Contact Me",
+        "text": "Bei Fragen oder Anliegen wenden Sie sich bitte an mich unter den folgenden Adressen:"
+      }
+    }
+  }
+}

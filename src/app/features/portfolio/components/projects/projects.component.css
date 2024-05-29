@@ -1,0 +1,74 @@
+.projects {
+  margin-top: 15vh;
+  padding: 20px;
+  min-height: 60vh;
+}
+
+.card:hover {
+  z-index: 100;
+  transform: scale(1.03);
+  transition: 0.4s;
+}
+
+.titel h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.cards {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 20px;
+  max-width: 400px;
+  min-width: 370px;
+  color: var(--primary-text-color);
+  box-shadow: var(--primary-box-shadow);
+}
+
+.dark-theme .card {
+  box-shadow: var(--dark-box-shadow);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.dark-theme .mat-mdc-card-subtitle {
+  color: #777777;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.end {
+  justify-content: flex-end;
+
+}
+
+.mat-mdc-card {
+  height: 100%;
+  justify-content: space-between;
+}
+
+.mat-card-actions {
+  display: flex;
+  width: 100%;
+  padding: 8px 16px;
+}
+
+.buttons, .icon-github {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+.icon-github .mat-icon {
+  scale: 1.8;
+}

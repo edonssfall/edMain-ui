@@ -1,0 +1,33 @@
+<div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }">
+  <div #homeSection class="home-theme">
+    <div class="image-section">
+      <img src="assets/portfolio/images/leonid.png" alt="Leonid Tsarov"/>
+    </div>
+    <div class="text-section">
+      <h1 data-text="Welcome to My Portfolio">{{ 'portfolio.home.title' | translate }}</h1>
+      <div class="animated-text">
+        <h1 data-text="Your Name">{{ 'portfolio.home.name' | translate }}
+          <h1 class="name">Leonid Tsarov</h1>
+        </h1>
+      </div>
+      <div class="animated-text">
+        <h1 data-text="Your Profession">{{ 'portfolio.home.intro' | translate }}
+          <h1 [ngStyle]="{ 'text-decoration': textArray[currentIndex] === 'designer' ? 'line-through' : 'none' }">
+            {{ 'portfolio.home.' + textArray[currentIndex]  | translate }}</h1>
+        </h1>
+      </div>
+      <div class="contact">
+        <button mat-button (click)='contactService.phoneToClipboard("{{environment.contact.phone}}")'>
+          <a>{{ environment.contact.phone }}</a>
+        </button>
+        <button mat-button>
+          <a mat-button href='mailto:{{environment.contact.email}}'>{{ environment.contact.email }}</a>
+        </button>
+        <button mat-raised-button class="buttons" (click)="contactService.downloadCV()">
+          <mat-icon>download</mat-icon>
+          {{ 'portfolio.home.cv' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
