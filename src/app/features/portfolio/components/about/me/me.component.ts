@@ -1,3 +1,4 @@
+import {ThemeService} from "../../../services/theme.service";
 import {Component} from '@angular/core';
 
 @Component({
@@ -6,5 +7,8 @@ import {Component} from '@angular/core';
   styleUrl: './me.component.css'
 })
 export class MeComponent {
+
+  constructor(public themeService: ThemeService) {
+  }
 
 }

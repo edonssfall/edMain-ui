@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
 }
 
 .about-section h1{
@@ -11,8 +10,30 @@
   font-weight: 700;
 }
 
+a {
+  color: var(--primary-text-color);
+}
+
+.dark-theme a {
+  color: var(--dark-text-color);
+}
+
 .section {
   margin: 20px;
   max-width: 1200px;
   width: 100%;
+}
+
+@media (max-width: 1300px) {
+  .about-section {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }

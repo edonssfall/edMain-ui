@@ -1,9 +1,16 @@
-<div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }" id="contact">
+<div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }">
   <footer class='footer'>
     <div class='footer-content'>
-      <div class='contact-info'>
-        <button mat-flat-button (click)="openDialog('500ms', '500ms')">
-          <div>{{ 'portfolio.contact.button' | translate }}</div>
+      <div class="contact">
+        <button mat-button (click)='contactService.phoneToClipboard("{{environment.contact.phone}}")'>
+          <a>{{ environment.contact.phone }}</a>
+        </button>
+        <button mat-button>
+          <a mat-button href='mailto:{{environment.contact.email}}'>{{ environment.contact.email }}</a>
+        </button>
+        <button mat-raised-button class="buttons" (click)="contactService.downloadCV()">
+          <mat-icon>download</mat-icon>
+          {{ 'portfolio.home.cv' | translate }}
         </button>
       </div>
       <div class='social-links'>

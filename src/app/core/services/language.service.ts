@@ -7,8 +7,8 @@ import {Injectable, OnInit} from "@angular/core";
 export class LanguageService implements OnInit {
   localName = environment.localStorage.language;
   languages: Language[] = [
-    {name: 'English', code: 'en'},
-    {name: 'German', code: 'de'}
+    {name: 'German', code: 'de'},
+    {name: 'English', code: 'en'}
   ];
   currentLanguage: Language = this.languages[0];
 

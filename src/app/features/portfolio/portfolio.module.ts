@@ -1,16 +1,15 @@
-import {MatDialogActions, MatDialogContent, MatDialogTitle} from "@angular/material/dialog";
 import {NavigationComponent} from './components/navigation/navigation.component';
 import {ProjectsComponent} from "./components/projects/projects.component";
-import {ModalComponent} from './components/contact/modal/modal.component';
 import {TableComponent} from './components/about/table/table.component';
-import {ContactComponent} from "./components/contact/contact.component";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
+import {FooterComponent} from "./components/contact/footer.component";
 import {PortfolioRoutingModule} from "./portfolio-routing.module";
 import {AboutComponent} from "./components/about/about.component";
 import {HomeComponent} from "./components/home/home.component";
 import {MeComponent} from './components/about/me/me.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {ContactService} from "./services/contact.service";
 import {MatButtonModule} from '@angular/material/button';
 import {PortfolioComponent} from "./portfolio.component";
 import {ScrollService} from "./services/scroll.service";
@@ -32,9 +31,8 @@ import {NgModule} from '@angular/core';
     NavigationComponent,
     PortfolioComponent,
     ProjectsComponent,
-    ContactComponent,
+    FooterComponent,
     TableComponent,
-    ModalComponent,
     AboutComponent,
     HomeComponent,
     MeComponent,
@@ -44,13 +42,11 @@ import {NgModule} from '@angular/core';
   ],
   imports: [
     PortfolioRoutingModule,
-    MatDialogActions,
     MatSidenavModule,
-    MatDialogContent,
     HttpClientModule,
     MatToolbarModule,
+    TranslateModule,
     MatButtonModule,
-    MatDialogTitle,
     MatTableModule,
     MatIconModule,
     MatMenuModule,
@@ -61,9 +57,9 @@ import {NgModule} from '@angular/core';
     MatGridList,
     MatGridTile,
     MatRipple,
-    TranslateModule,
   ],
   providers: [
+    ContactService,
     ScrollService,
     ThemeService,
   ],

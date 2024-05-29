@@ -1,15 +1,18 @@
+import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
 import {IProjects} from "../../interfaces/projects.interface";
+import {ScrollService} from "../../services/scroll.service";
 import {ThemeService} from "../../services/theme.service";
-import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements AfterViewInit {
+  @ViewChild('projectsSection') projectsSection!: ElementRef;
 
-  constructor(public themeService: ThemeService) {
+  constructor(public themeService: ThemeService,
+              private scrollService: ScrollService) {
   }
 
   dataSource: IProjects[] = [
@@ -52,4 +55,8 @@ export class ProjectsComponent {
       github: 'https://github.com/edonssfall/IMDB',
     }
   ]
+
+  ngAfterViewInit() {
+    this.scrollService.projectsSection = this.projectsSection.nativeElement;
+  }
 }

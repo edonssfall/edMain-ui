@@ -1,4 +1,4 @@
-<div>
+<div [ngClass]="{ 'dark-theme': themeService.currentTheme.isDark }">
   <h3>
     {{ 'portfolio.about.text1.1' | translate }} <a href="https://tie.international/">TIE-International
     Bern</a> {{ 'portfolio.about.text1.2' | translate }}<br><br>

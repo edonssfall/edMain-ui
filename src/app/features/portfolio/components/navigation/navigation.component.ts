@@ -1,5 +1,6 @@
 import {LanguageService} from "../../../../core/services/language.service";
 import {Component, ElementRef, HostListener, ViewChild} from '@angular/core';
+import {ScrollService} from "../../services/scroll.service";
 import {ThemeService} from "../../services/theme.service";
 import {MatSidenav} from "@angular/material/sidenav";
 
@@ -13,7 +14,8 @@ export class NavigationComponent {
 
   constructor(private languageService: LanguageService,
               public themeService: ThemeService,
-              private eRef: ElementRef) {
+              private eRef: ElementRef,
+              public scrollService: ScrollService) {
   }
 
   toggleTheme() {
@@ -33,4 +35,6 @@ export class NavigationComponent {
       this.sidenav.close();
     }
   }
+
+  protected readonly scroll = scroll;
 }

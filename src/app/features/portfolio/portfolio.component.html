@@ -1,4 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
+  <span *ngIf='contactService.showNotification'
+        class="notification">{{ contactService.notificationMessage | translate }}</span>
   <div [ngClass]="{ 'dark-theme': this.themeService.currentTheme.isDark }">
     <app-navigation></app-navigation>
 
@@ -13,6 +15,6 @@
       <mat-icon>keyboard_arrow_up</mat-icon>
     </button>
 
-    <app-contact></app-contact>
+    <app-footer></app-footer>
   </div>
 </mat-sidenav-container>
